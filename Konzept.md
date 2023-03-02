@@ -22,10 +22,18 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
 
 # Scope des Projektes
 ## Was wir erreichen wollen
-TODO
+- mindestens ein ML-Modell und ein DL-Modell
+- MLOps (wandb.ai)
+- App zum Klassifizieren/Aufzeichnen der Aktivitäten
+- Datengrundlage ist in einer Timeseries-Datenbank
+- Tool um Datenqualität zu überprüfen:
+  - Missing Data
+  - Daten manuell zuschneiden (Anfang und Ende der Aufzeichnung)
 
-# Was wir sicher nicht erreichen wollen
-TODO
+
+# Was wir nicht erreichen wollen
+ - Reinforcment Learning (Klassifikationen der App korrigieren)
+ - Klassifikation von Smartwatch-Daten
 
 # Milestones
 (TODO nur ein Vorschlag. bitte als Tabelle, weil schöner)
