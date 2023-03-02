@@ -37,14 +37,12 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
 
 # Milestones
 (TODO nur ein Vorschlag. bitte als Tabelle, weil schöner)
-- Daten sammeln: bis wann?
-- Konzept/Planung: 16. März 2023
-- Feature Engineering für ML:
-- ML:
-- Feature Engineering für DL:
-- DL:
-- App mit Modell:
-- Abgabe Challenge: 16. Juni 2023
+- Daten sammeln, einlesen, zuschneiden + Konzept/Planung: 16. März 2023
+- Feature Engineering erstes ML Modell: 6. April 2023
+- ML-Modelle und refining Feature Engineering: 4. Mai 2023
+- DL-Modelle: 25. Mai 2023
+- App mit Modell: 15. Juni 2023
+- Abgabe Challenge: 15. Juni 2023
   - Vergleich der Modelle
 - Präsentation: KW 25/26
 
