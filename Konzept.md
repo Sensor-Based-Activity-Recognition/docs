@@ -60,6 +60,5 @@ CHume nid ganz drus. Wie gnau müesemer das scho ahgäh, bevor mir experimentier
 #AntiAgile
 
 # Output
-(in welcher Form die Erkenntnisse pr¨asentiert werden sollen (Output))
-Wei mir sege, es git keis Dokument, und mir mache nur e präsi zum üs arbeit spaare? 
-Weiss nid eb de hinge usegeit, wenn mir sache wie z.B. Methode süsch niene übersichtlich darstelle und festhalte.
+(in welcher Form die Erkenntnisse präsentiert werden sollen (Output))
+Präsi + docs repo
