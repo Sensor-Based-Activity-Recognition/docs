@@ -83,5 +83,4 @@ So bleibt es möglich Smartwatches herauszufiltern.
  - Vergleich der Modelle
 
 # Output
-(in welcher Form die Erkenntnisse präsentiert werden sollen (Output))
-Präsi + docs repo
+Output dieses Projektes sind diverse Notebooks, die Daten selber sowie eine Präsentation.
