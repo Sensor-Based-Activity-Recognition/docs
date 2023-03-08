@@ -29,6 +29,16 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
 - Tool um Datenqualität zu überprüfen:
   - Missing Data
   - Daten manuell zuschneiden (Anfang und Ende der Aufzeichnung)
+- gemessene Daten beinhalten (npch nicht klar ob wir alle verwenden werden):
+  - Inertial Sensors:
+    - Accelerometer
+    - Beschleunigungssensor
+    - Gyroskop
+    - Orientierungssensor
+  - Non-inertial Sensors:
+    - Magnetometer
+    - Barometer
+    - Standort
 
 
 # Was wir nicht erreichen wollen
