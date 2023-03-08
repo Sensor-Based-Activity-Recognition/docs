@@ -64,11 +64,23 @@ Von da werden die Daten als JSON oder als gezipptes CSV (weil JSON nicht bei all
 In diesem Ordner existiert für jede Aktivität ein Unterordner in welchem jeweils ein Ordner für jede Person steht. Die Datei selbst muss den Namen des Endgerätes enthalten.
 So bleibt es möglich Smartwatches herauszufiltern.
 
-TODO: vllt automatischi Backups nach Github oder so?
-
 # Datenverarbeitung & Modellierung
-CHume nid ganz drus. Wie gnau müesemer das scho ahgäh, bevor mir experimentiert hei? Ig denke, d Idee isch, das mir Papers läse und üs es Bild vo mögliche Methode mache und denne die gwählte hie niederschriebe.
-#AntiAgile
+## Data Preprocessing
+ - Die Aufzeichnungen müssen zugeschnitten werden, da zu Beginn und am Ende der Aufzeichnung (noch) keine Bewegung stattfindet.
+ - Da nicht jedes Gerät und nicht jeder Sensor die Daten mit gleicher Frequenz aufnimmt, müssen die Daten ge-resampled werden.
+ - Die Daten müssen durch windowing in gleiche lange Sequenzen aufgeteilt werden.
+ - Fehlende Daten müssen interpoliert werden.
+## Feature Engineering
+ - Fast Fourier Transformation (FFT) um Frequenzen zu extrahieren
+ - (simple) Aggregationen (Zeitbasiert und Frequenzbasiert) (z.B. Mittelwert, Standardabweichung, Median, ...)
+ - smoothings (z.B. Moving Average)
+## Modellierung
+ - Train-Test Split
+ - Diverse ML-Modelle trainieren
+ - Diverse DL-Modelle trainieren
+ - Hyperparameter Tuning mit Cross-Validation
+ - Evaluation der Modelle mit verschiedenen Metriken (AUC ROC, F1, Acc, ...)
+ - Vergleich der Modelle
 
 # Output
 (in welcher Form die Erkenntnisse präsentiert werden sollen (Output))
