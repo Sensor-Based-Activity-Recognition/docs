@@ -36,15 +36,16 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
  - Klassifikation von Smartwatch-Daten
 
 # Milestones
-(TODO nur ein Vorschlag. bitte als Tabelle, weil schöner)
-- Daten sammeln, einlesen, zuschneiden + Konzept/Planung: 16. März 2023
-- Feature Engineering erstes ML Modell: 6. April 2023
-- ML-Modelle und refining Feature Engineering: 4. Mai 2023
-- DL-Modelle: 25. Mai 2023
-- App mit Modell: 15. Juni 2023
-- Abgabe Challenge: 15. Juni 2023
-  - Vergleich der Modelle
-- Präsentation: KW 25/26
+|Was|Wann                         |
+|---|-----------------------------|
+|Daten sammeln, einlesen, zuschneiden + Konzept/Planung|16. März 2023                |
+|Feature Engineering erstes ML Modell|6. April 2023                |
+|ML-Modelle und refining Feature Engineering|4. Mai 2023                  |
+|DL-Modelle|25. Mai 2023                 |
+|App mit Modell|15. Juni 2023                |
+|Abgabe Challenge|15. Juni 2023                |
+|Vergleich der Modelle|15. Juni 2023                |
+|Präsentation|KW 25/26                     |
 
 # Datensicherung/Datenbeschriftung
 Wir die Aktivitäten mit der anderen Gruppe abgestummen habe um somit gemeinsam Daten sammeln zu können.
