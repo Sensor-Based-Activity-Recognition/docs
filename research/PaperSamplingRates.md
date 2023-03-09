@@ -37,6 +37,7 @@ to achieve the acquisition of feature representations that make the sampling rat
 
 ### What were the main findings of the study?
 - the method combining the sampling-rate adversarial network and data augmentation by downsampling works better than conventional methods
+- a 12.5 Hz sampling rate is sufficient to recognize the basic activity
 
 ### How well did the proposed solution perform?
 - N/A
