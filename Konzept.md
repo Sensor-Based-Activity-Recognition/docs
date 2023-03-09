@@ -16,9 +16,21 @@ Ziel dieser Challenge ist es, Aktivitäten mittels Bewegungsdaten eines mobilen 
  - Sitzen
 
 ## Genauigkeit
-Wir haben uns das Ziel gesetzt, eine Genauigkeit von 95 % zu erreichen (welche Metrik sind am besten für unsere Anwendung? (AUC ROC, F1, Acc?)).
+Wir haben uns das Ziel gesetzt, eine Genauigkeit (macro F1-score) von 95 % zu erreichen.
 Dies scheint uns realistisch erreichbar, trotz des Fakts, dass unsere Daten sehr unterschiedlich aufgenommen werden (Smartphone/Smartwatch, Ort am Körper).
 Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwischen 80 % - 99 %.
+
+Wir haben den macro F1-Score gewählt, da dieser alle Klassen gleich gewichtet.
+
+Formel für den macro F1-Score:
+$$
+F1_{macro} = \frac{1}{n} \sum_{i=1}^{n} F1_{i}
+$$
+Formel für den F1-Score der Klasse i:
+$$
+F1_{i} = \frac{2 \cdot Precision_{i} \cdot Recall_{i}}{Precision_{i} + Recall_{i}}
+$$
+
 
 # Scope des Projektes
 ## Was wir erreichen wollen
