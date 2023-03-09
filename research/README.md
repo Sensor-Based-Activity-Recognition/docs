@@ -1,3 +1,7 @@
-# Paper Overview
+# Research Paper Overview
 
--  [Smartphone Sensor-based Human Activity Recognition Robust to Different Sampling Rates]()
+Survey Studies
+- TODO
+
+Implementation Studies
+-  [Smartphone Sensor-based Human Activity Recognition Robust to Different Sampling Rates](PaperSamplingRates.md)
