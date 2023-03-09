@@ -24,7 +24,7 @@ Wir haben den F1-Score Macro gewählt, da dieser alle Klassen gleich gewichtet.
 
 Formel für den F1-Score Macro:
 $$
-F1_{macro} = \frac{1}{n} \sum_{i=1}^{n} F1_{i}
+F1_{macro}=\frac{1}{n}\sum_{i=1}^{n}F1_{i}
 $$
 
 Formel für den F1-Score der Klasse i:
@@ -37,7 +37,7 @@ $$
 ## Was wir erreichen wollen
 - mindestens ein ML-Modell und ein DL-Modell
 - MLOps (wandb.ai)
-- App zum Klassifizieren/Aufzeichnen der Aktivitäten
+- App zum Klassifizieren
 - Datengrundlage ist in einer Timeseries-Datenbank
 - Tool, um Datenqualität zu überprüfen:
   - Fehlende Daten
@@ -101,6 +101,6 @@ So bleibt es möglich, Smartwatches herauszufiltern.
 # Lieferobjekte
 Lieferobjekte dieses Projektes sind:
  - ein gut strukturiertes und dokumentiertes Git-Repository (welches von einer Person ausserhalb des Projektes weiterentwickelt werden könnte),
- - die App zum Klassifizieren/Aufzeichnen der Aktivitäten,
+ - die App zum Klassifizieren,
  - die Daten selbst,
  - eine Präsentation, welche unsere Ergebnisse und unseren Prozess dokumentiert. 
