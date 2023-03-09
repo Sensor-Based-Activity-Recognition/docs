@@ -23,14 +23,10 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
 Wir haben den F1-Score Macro gewählt, da dieser alle Klassen gleich gewichtet.
 
 Formel für den F1-Score Macro:
-$$
-F1_{macro}=\frac{1}{n}\sum_{i=1}^{n}F1_{i}
-$$
+$$F1_{macro}=\frac{1}{n}\sum_{i=1}^{n}F1_{i}$$
 
 Formel für den F1-Score der Klasse i:
-$$
-F1_{i} = \frac{2 \cdot Precision_{i} \cdot Recall_{i}}{Precision_{i} + Recall_{i}} 
-$$
+$$F1_{i} = \frac{2 \cdot Precision_{i} \cdot Recall_{i}}{Precision_{i} + Recall_{i}}$$
 
 
 # Scope des Projektes
