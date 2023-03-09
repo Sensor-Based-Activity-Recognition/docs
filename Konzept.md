@@ -42,7 +42,7 @@ Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwi
 
 
 # Was wir nicht erreichen wollen
- - Reinforcement Learning o.ä. (Klassifikationen aus der App korrigieren)
+ - Iterative Modelling (Klassifikationen aus der App korrigieren und zurück in die Datenbank schreiben)
  - Klassifikation von Smartwatch-Daten. Da diese grundlegend anders aufgenommen werden als die Daten von Smartphones.
 
 
@@ -69,7 +69,7 @@ So bleibt es möglich, Smartwatches herauszufiltern.
 
 # Datenverarbeitung & Modellierung
 ## Data Preprocessing
- - Die Aufzeichnungen müssen zugeschnitten werden, da zu Beginn und am Ende der Aufzeichnung (noch) keine Bewegung stattfindet.
+ - Die Aufzeichnungen werden manuell zugeschnitten, da zu Beginn und am Ende der Aufzeichnung (noch) keine Bewegung stattfindet.
  - Da nicht jedes Gerät und nicht jeder Sensor die Daten mit gleicher Frequenz aufnimmt, müssen die Daten resampled werden.
  - Die Daten müssen in gleich lange Sequenzen/Windows aufgeteilt werden.
  - Fehlende Daten müssen interpoliert werden.
@@ -78,7 +78,7 @@ So bleibt es möglich, Smartwatches herauszufiltern.
  - (simple) Aggregationen (zeitbasiert und frequenzbasiert) (z.B. Mittelwert, Standardabweichung, Median, ...)
  - Smoothings (z.B. Moving Average)
 ## Modellierung
- - Train-Test Split
+ - stratified Train-Test Split (80%/20%)
  - Diverse ML-Modelle trainieren
  - Diverse DL-Modelle trainieren
  - Hyperparameter Tuning mit Cross-Validation
@@ -86,4 +86,8 @@ So bleibt es möglich, Smartwatches herauszufiltern.
  - Vergleich der Modelle
 
 # Lieferobjekte
-Lieferobjekte dieses Projektes sind diverse Notebooks, die Daten selbst sowie eine Präsentation.
+Lieferobjekte dieses Projektes sind:
+ - ein gut strukturiertes und dokumentiertes Git-Repository (welches von einer Person ausserhalb des Projektes weiterentwickelt werden könnte),
+ - die App zum Klassifizieren/Aufzeichnen der Aktivitäten,
+ - die Daten selbst,
+ - eine Präsentation, welche unsere Ergebnisse und unseren Prozess dokumentiert. 
