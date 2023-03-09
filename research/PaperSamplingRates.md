@@ -36,18 +36,20 @@ to achieve the acquisition of feature representations that make the sampling rat
 ## 3. Results
 
 ### What were the main findings of the study?
-- N/A
+- the method combining the sampling-rate adversarial network and data augmentation by downsampling works better than conventional methods
 
 ### How well did the proposed solution perform?
 - N/A
 
 ### Were there any limitations or challenges encountered during the study?
-- N/A
+- Only compared on HASC dataset
 
 ## 4. Insights
 
 ### How can these insights be used to inform your own solution for sensor-based activity recognition?
-- N/A
+- Check whether we get different results with/without when training the models
+  - with all data transformed to specific sampling rate (expected to perform better)
+  - with keep the sampling rates as they are
 
 ### What are the implications for our project in sensor-based activity recognition?
 - TODO
