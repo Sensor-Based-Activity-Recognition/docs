@@ -1,10 +1,8 @@
-# Sensor-Based Activity Recognition [Paper Summary]
+# Smartphone Sensor-based Human Activity Recognition Robust to Different Sampling Rates
 
 ## Paper Details
 
-**Title** | Smartphone Sensor-based Human Activity Recognition Robust to Different Sampling Rates
-
-**Published** | 2021
+**Published**: 2021
 
 ## 1. Proposed Solution
 
