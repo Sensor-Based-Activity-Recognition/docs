@@ -3,6 +3,7 @@
 ## Paper Details
 
 **Published**: 2020
+
 **Link**: https://doi.org/10.1007/s12652-020-01899-y
 
 ## 1. Proposed Solution
