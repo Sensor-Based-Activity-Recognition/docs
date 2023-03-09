@@ -16,8 +16,7 @@ to achieve the acquisition of feature representations that make the sampling rat
 
 ### What methodology was used to evaluate the proposed solution?
 - Data augmentation by downsampling
-- Dataset split
-<img width="1093" alt="image" src="https://user-images.githubusercontent.com/22744751/224159194-4f74d7d7-34e0-4f04-9c1e-d2d2476534db.png">
+- Dataset split <img width="1093" alt="image" src="https://user-images.githubusercontent.com/22744751/224159194-4f74d7d7-34e0-4f04-9c1e-d2d2476534db.png">
 - Training the models
 
 ### What data sets were used?
