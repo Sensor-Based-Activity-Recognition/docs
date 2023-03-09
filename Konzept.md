@@ -1,5 +1,6 @@
 # Konzept für Sensor Based Activity Recognition Challenge
 Von:
+
 - Tobias Buess
 - Gabriel Torres Gamez
 - Yvo Keller
@@ -8,6 +9,7 @@ Von:
 # Ziel
 ## Bewegungsprofile
 Ziel dieser Challenge ist es, Aktivitäten mittels Bewegungsdaten eines mobilen Endgerätes zu erkennen. Es sollen 6 Bewegungsprofile erkannt werden:
+
  - Gehen (Schweizerdeutsch: Laufen)
  - Laufen (Schweizerdeutsch: Rennen)
  - Treppensteigen
