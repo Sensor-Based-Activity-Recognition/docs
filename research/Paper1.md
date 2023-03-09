@@ -15,6 +15,7 @@ to achieve the acquisition of feature representations that make the sampling rat
 - An activity recognition model that is robust to different sampling rates by applying an adversarial deep learning network
 
 ## 2. Methodology
+
 ### What methodology was used to evaluate the proposed solution?
 - Data augmentation by downsampling
 - Dataset split
@@ -36,14 +37,17 @@ to achieve the acquisition of feature representations that make the sampling rat
 <img width="565" alt="image" src="https://user-images.githubusercontent.com/22744751/224158217-2aea0c86-cd95-4ee8-96d8-0557deed53a6.png">
 
 ## 3. Results
-What were the main findings of the study?
-How well did the proposed solution perform?
-Were there any limitations or challenges encountered during the study?
+
+### What were the main findings of the study?
+
+### How well did the proposed solution perform?
+
+### Were there any limitations or challenges encountered during the study?
 
 ## 4. Insights
 
 ### How can these insights be used to inform your own solution for sensor-based activity recognition?
-- TODO
+- N/A
 
 ### What are the implications for our project in sensor-based activity recognition?
 - TODO
