@@ -98,6 +98,7 @@ So bleibt es möglich, Smartwatches herauszufiltern.
 
 # Lieferobjekte
 Lieferobjekte dieses Projektes sind:
+
  - ein gut strukturiertes und dokumentiertes Git-Repository (welches von einer Person ausserhalb des Projektes weiterentwickelt werden könnte),
  - die App zum Klassifizieren,
  - die Daten selbst,
