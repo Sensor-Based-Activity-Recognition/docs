@@ -9,7 +9,7 @@
 ### What is the proposed solution?
 - The proposed
 method applies an adversarial network and data augmentation by downsampling to a common activity recognition model
-to achieve the acquisition of feature representations that make the sampling rate unspecifiable 
+to achieve the acquisition of feature representations that make the sampling rate unspecifiable
 - An activity recognition model that is robust to different sampling rates by applying an adversarial deep learning network
 
 ## 2. Methodology
@@ -36,10 +36,13 @@ to achieve the acquisition of feature representations that make the sampling rat
 ## 3. Results
 
 ### What were the main findings of the study?
+- N/A
 
 ### How well did the proposed solution perform?
+- N/A
 
 ### Were there any limitations or challenges encountered during the study?
+- N/A
 
 ## 4. Insights
 
