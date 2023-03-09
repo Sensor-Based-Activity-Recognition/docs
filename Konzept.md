@@ -82,10 +82,12 @@ So bleibt es möglich, Smartwatches herauszufiltern.
  - Da nicht jedes Gerät und nicht jeder Sensor die Daten mit gleicher Frequenz aufnimmt, müssen die Daten resampled werden.
  - Die Daten müssen in gleich lange Sequenzen/Windows aufgeteilt werden.
  - Fehlende Daten müssen interpoliert werden.
+
 ## Feature Engineering
  - Fast Fourier Transformation (FFT), um Frequenzen zu extrahieren
  - (simple) Aggregationen (zeitbasiert und frequenzbasiert) (z.B. Mittelwert, Standardabweichung, Median, ...)
  - Smoothings (z.B. Moving Average)
+
 ## Modellierung
  - stratified Train-Test Split (80%/20%)
  - Diverse ML-Modelle trainieren
