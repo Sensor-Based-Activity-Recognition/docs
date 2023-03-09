@@ -50,6 +50,3 @@ to achieve the acquisition of feature representations that make the sampling rat
 - Check whether we get different results with/without when training the models
   - with all data transformed to specific sampling rate (expected to perform better)
   - with keep the sampling rates as they are
-
-### What are the implications for our project in sensor-based activity recognition?
-- TODO
