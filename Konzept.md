@@ -16,19 +16,20 @@ Ziel dieser Challenge ist es, Aktivitäten mittels Bewegungsdaten eines mobilen 
  - Sitzen
 
 ## Genauigkeit
-Wir haben uns das Ziel gesetzt, eine Genauigkeit (macro F1-score) von 95 % zu erreichen.
+Wir haben uns das Ziel gesetzt, eine Genauigkeit (F1-Score Macro) von 95 % zu erreichen.
 Dies scheint uns realistisch erreichbar, trotz des Fakts, dass unsere Daten sehr unterschiedlich aufgenommen werden (Smartphone/Smartwatch, Ort am Körper).
 Diverse Papers berichten bei Sensor Based Activity Recognition Genauigkeiten zwischen 80 % - 99 %.
 
-Wir haben den macro F1-Score gewählt, da dieser alle Klassen gleich gewichtet.
+Wir haben den F1-Score Macro gewählt, da dieser alle Klassen gleich gewichtet.
 
-Formel für den macro F1-Score:
+Formel für den F1-Score Macro:
 $$
 F1_{macro} = \frac{1}{n} \sum_{i=1}^{n} F1_{i}
 $$
+
 Formel für den F1-Score der Klasse i:
 $$
-F1_{i} = \frac{2 \cdot Precision_{i} \cdot Recall_{i}}{Precision_{i} + Recall_{i}}
+F1_{i} = \frac{2 \cdot Precision_{i} \cdot Recall_{i}}{Precision_{i} + Recall_{i}} 
 $$
 
 
@@ -59,16 +60,16 @@ $$
 
 
 # Milestones
-|Was|Wann                         |
-|---|-----------------------------|
-|Daten sammeln, einlesen, zuschneiden + Konzept/Planung|16. März 2023                |
-|Feature Engineering erstes ML-Modell|6. April 2023                |
-|ML-Modelle und refining Feature Engineering|4. Mai 2023                  |
-|DL-Modelle|25. Mai 2023                 |
-|App mit Modell|15. Juni 2023                |
-|Abgabe Challenge|15. Juni 2023                |
-|Vergleich der Modelle|15. Juni 2023                |
-|Präsentation|KW 25/26                     |
+| Was                                                    | Wann           |
+|--------------------------------------------------------|----------------|
+| Daten sammeln, einlesen, zuschneiden + Konzept/Planung | 16. März 2023  |
+| Feature Engineering erstes ML-Modell                   | 06. April 2023 |
+| ML-Modelle und refining Feature Engineering            | 04. Mai 2023   |
+| DL-Modelle                                             | 25. Mai 2023   |
+| App mit Modell                                         | 15. Juni 2023  |
+| Abgabe Challenge                                       | 15. Juni 2023  |
+| Vergleich der Modelle                                  | 15. Juni 2023  |
+| Präsentation                                           | KW 25/26       |
 
 
 # Datensicherung/Datenbeschriftung
