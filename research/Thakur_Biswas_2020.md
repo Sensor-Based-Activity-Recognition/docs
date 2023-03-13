@@ -53,6 +53,8 @@ Measuring by phone in pocket and recognizing similar activities as we do, Adaboo
 
 ![image](https://user-images.githubusercontent.com/22744751/224645926-9fd8abaf-0ca3-41ff-ba92-f62e2f8fbb15.png)
 
+![image](https://user-images.githubusercontent.com/22744751/224647346-6bd3d712-0772-4bba-8a9a-c9e3ce974b0a.png)
+
 ### Were there any limitations or challenges encountered during the study?
 - N/A
 
