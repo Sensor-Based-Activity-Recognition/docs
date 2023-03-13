@@ -62,13 +62,13 @@ Two interesting approaches towards time series data using CNN's are discussed
 
 When we use data from multiple sensors, we have multi modal input. There are different strategies to handle this:
 
-__Feature Fusion__ - merge the multi modal data to one input feature vector. Risk of loosing information about important correlations. <img width="394" alt="image" src="https://user-images.githubusercontent.com/22744751/224637466-ee5cddeb-a093-4a41-8a36-927d3b636cb5.png">
+_Feature Fusion_ - merge the multi modal data to one input feature vector. Risk of loosing information about important correlations. <img width="394" alt="image" src="https://user-images.githubusercontent.com/22744751/224637466-ee5cddeb-a093-4a41-8a36-927d3b636cb5.png">
 
 There are several stategies on when and how to perform this fusion:
 
 <img width="937" alt="image" src="https://user-images.githubusercontent.com/22744751/224640828-0eb81710-55da-46a9-ae7d-bf9206b78d30.png">
 
-__Classifier Ensemble__ - train classifier models on each feature modality, then find the recognized activity using an ensemble strategy. One possibility described is to train an MLP. Nice thing about this strategy is that it is kept modular. Sensors can be added/removed, and only the ensemble classifier needs to be retrained. Possible downside is that due to the late fusion, intermodal correlations might be missed. <img width="512" alt="image" src="https://user-images.githubusercontent.com/22744751/224638039-0c1eff5b-d6fd-4974-acac-a6fd1fbc3b44.png">
+_Classifier Ensemble_ - train classifier models on each feature modality, then find the recognized activity using an ensemble strategy. One possibility described is to train an MLP. Nice thing about this strategy is that it is kept modular. Sensors can be added/removed, and only the ensemble classifier needs to be retrained. Possible downside is that due to the late fusion, intermodal correlations might be missed. <img width="512" alt="image" src="https://user-images.githubusercontent.com/22744751/224638039-0c1eff5b-d6fd-4974-acac-a6fd1fbc3b44.png">
 
 
 
