@@ -55,7 +55,7 @@ LSTM (Zhu et al. 2016)
 **Deep Learning**
 Two interesting approaches towards time series data using CNN's are discussed
 - Option 1 utilizes a time-frequency-spectral map which is fed into a 2D-CNN. In a mentioned study this was calcualted using "Short-time Discrete Fourier Transform (STDFT)". As I understand this approach, the interesting thing here is that the time series data is downsampled to different frequencies, making this map hold information on shorter- and longer time scales <img width="377" alt="image" src="https://user-images.githubusercontent.com/22744751/224633873-969c50e2-5822-4096-b995-233b6623c17b.png">
-- Option 2 feeds the raw time series data into a 1D-CNN. This in turn also means only one frequency is considered. One drawback is that the time range must be fixed because of the kernel size. <img width="377" alt="image" src="https://user-images.githubusercontent.com/22744751/224633916-9bcc94cb-7167-4ce4-8244-1b77942606b6.png">
+- Option 2 feeds the raw time series data into a 1D-CNN. This in turn also means only one frequency is considered. One drawback is that the time range must be fixed because of the kernel size <img width="377" alt="image" src="https://user-images.githubusercontent.com/22744751/224633916-9bcc94cb-7167-4ce4-8244-1b77942606b6.png">
 - Alternative to Option 2: This interesting [article](https://towardsdatascience.com/how-to-use-convolutional-neural-networks-for-time-series-classification-56b1b0a07a57) explains a more complex multi stage 1D-CNN approach, where it also becomes possible to consider different frequencies (downsampling) and other preprocessing like smoothing using moving averages.
 
 **Feature Fusion**
