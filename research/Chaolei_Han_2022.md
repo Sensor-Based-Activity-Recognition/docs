@@ -39,7 +39,9 @@
     - Filters are divided into parallel branches which are perfomed in a homogeneous way
     - Output of branches are concatenated
     - generate different receptive fields
-    
+
+![image](https://user-images.githubusercontent.com/91325328/224916208-7cd7adf6-86e9-47fe-a8da-eba5b9adfb92.png)
+   
 ## 3. Results
 
 ### What were the main findings of the study?
