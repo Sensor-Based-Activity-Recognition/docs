@@ -6,3 +6,4 @@ Survey Studies
 
 Implementation Studies
 -  [Smartphone Sensor-based Human Activity Recognition Robust to Different Sampling Rates](Hasegawa_2021.md)
+-  [Human activity recognition using wearable sensors by heterogeneous convolutional neural networks](Chaolei_Han_2022.md)
