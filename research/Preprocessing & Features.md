@@ -10,6 +10,11 @@ Resampling of a signal
 Cut off frequencies higher or lower than a certain threshold
 - Librariy: scipy.signal.butter 
 
+## L2 Norm
+
+Euclidean norm of x, y and z axis of a sensor
+- Libraray numpy.linalg.norm
+
 # Proposed features
 
 ## Machine learning:
