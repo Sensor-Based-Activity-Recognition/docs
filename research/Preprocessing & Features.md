@@ -173,4 +173,15 @@ _Both traditional ML and deep learning models can be trained and compared using 
 
 _This pipeline focuses on frequency-domain features, which can be effective with traditional ML models like SVM or Decision Trees as well as deep learning models like MLP or CNN._
 
-These pipelines offer various combinations of preprocessing techniques. You can compare the performance of the activity recognition models developed using these pipelines and choose the one that yields optimal results. Additionally, you can experiment with different combinations or orders of techniques to fine-tune the pipeline for your specific problem.
+### Pipeline 7: Time-frequency-spectral Map for CNN
+
+1. Time alignment: Align the time-stamps of accelerometer and gyroscope data when using multiple sensors or different sources.
+2. Resampling: Resample the signals at a consistent sampling rate to make the data more uniform for further processing.
+3. Filtering (optional): Apply filters like low-pass, high-pass, or band-pass filters to remove noise from the raw accelerometer and gyroscope data, if necessary.
+4. Data fusion (optional): Combine accelerometer and gyroscope data in different ways, such as using the raw data directly, computing the Euclidean norm, or applying sensor fusion techniques (e.g., Kalman filter) to merge the data for more accurate activity recognition.
+5. Time-frequency transformation: Transform the time-domain accelerometer and gyroscope data into time-frequency representations (e.g., spectrograms) using techniques like Short-Time Fourier Transform (STFT) or Wavelet Transform.
+6. Data augmentation (optional): Enhance the training data by generating new examples through techniques like time-shifting, frequency-shifting, or time-stretching.
+7. Segmentation: Divide the time-frequency-spectral maps into smaller, fixed-length segments or sliding windows, which capture the characteristics of different activities.
+8. CNN input preparation: Format the segmented time-frequency-spectral maps as input data for the CNN, treating them as 2D arrays (image-like data).
+9. Model training and evaluation: Train the CNN using the prepared time-frequency-spectral map data and evaluate its performance on a test dataset.
+10. Fine-tuning: Optimize the CNN architecture, choice of time-frequency representation, and other hyperparameters to achieve the best activity recognition performance.
