@@ -88,6 +88,8 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 5. Feature scaling and normalization
 6. Model training and evaluation
 
+_Traditional ML models like k-NN, SVM, or Decision Trees may work well with this pipeline, as it focuses on basic preprocessing and feature extraction._
+
 ### Pipeline 2: Filtering and Smoothing
 
 1. Time alignment
@@ -99,6 +101,8 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 7. Feature scaling and normalization
 8. Model training and evaluation
 
+_As the pipeline focuses on noise reduction, both traditional ML models and deep learning models like MLP or CNN can be trained and compared._
+
 ### Pipeline 3: Feature Selection
 
 1. Time alignment
@@ -108,6 +112,8 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 5. Feature scaling and normalization
 6. Feature selection (e.g., PCA or RFE)
 7. Model training and evaluation
+
+_Traditional ML models, such as SVM, Decision Trees, or Logistic Regression, may benefit more from this pipeline, as feature selection can help reduce the dimensionality and improve model interpretability._
 
 ### Pipeline 4: Data Fusion and Augmentation
 
@@ -119,6 +125,8 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 6. Feature extraction
 7. Feature scaling and normalization
 8. Model training and evaluation
+
+_Deep learning models, such as CNN, RNN, or TCN, might work well with this pipeline, as they can handle large amounts of data and capture complex patterns._
 
 ### Pipeline 5: Comprehensive Preprocessing
 
@@ -134,6 +142,8 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 10. Feature selection (e.g., PCA or RFE)
 11. Model training and evaluation
 
+_Both traditional ML and deep learning models can be trained and compared using this pipeline, as it combines multiple preprocessing techniques to optimize the input data._
+
 ### Pipeline 6: Frequency-domain Features
 
 1. Time alignment
@@ -143,5 +153,7 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 5. Feature extraction (including frequency-domain features, e.g., FFT coefficients or wavelet coefficients)
 6. Feature scaling and normalization
 7. Model training and evaluation
+
+_This pipeline focuses on frequency-domain features, which can be effective with traditional ML models like SVM or Decision Trees as well as deep learning models like MLP or CNN._
 
 These pipelines offer various combinations of preprocessing techniques. You can compare the performance of the activity recognition models developed using these pipelines and choose the one that yields optimal results. Additionally, you can experiment with different combinations or orders of techniques to fine-tune the pipeline for your specific problem.
