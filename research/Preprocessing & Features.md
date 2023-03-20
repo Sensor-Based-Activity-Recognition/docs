@@ -71,10 +71,11 @@ Decompose a signal into it's base frequencies - similar approach to GML-MC3. Fea
 
 ### Spectrogram
 
-https://en.wikipedia.org/wiki/Spectrogram
-Library: `scipy.signal`
-
 A time-frequency-spectral map is a promising approach for activity recognition using Convolutional Neural Networks (CNNs). In this approach, you transform the raw accelerometer and gyroscope data into a time-frequency representation, such as spectrograms, which capture both time and frequency information. This representation provides richer information about the signal patterns related to different activities and allows CNNs to exploit the spatial and temporal dependencies in the data.
+
+See insights in paper [Chen_2021](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/research/Chen_2021.md#4-insights)
+
+https://en.wikipedia.org/wiki/Spectrogram / Library: `scipy.signal`
 
 Here's why time-frequency-spectral maps can be effective for CNNs:
 
@@ -82,7 +83,6 @@ Here's why time-frequency-spectral maps can be effective for CNNs:
 2. Hierarchical features: CNNs learn hierarchical features from the input data through multiple layers, starting from simple patterns to more complex ones. Time-frequency-spectral maps provide a suitable input format for CNNs to extract such hierarchical features and detect activity-specific patterns.
 3. Robustness to noise: Time-frequency representations can reduce the impact of noise in raw sensor data, making it easier for CNNs to discern relevant patterns for activity recognition.
 4. Data augmentation: Time-frequency-spectral maps can be augmented using techniques like time-shifting, frequency-shifting, or time-stretching to increase the diversity of the training data and improve the generalization capabilities of the CNN.
-
 
 To use time-frequency-spectral maps for CNNs, follow these steps:
 
