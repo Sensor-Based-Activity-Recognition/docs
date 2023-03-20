@@ -1,4 +1,4 @@
-# "Our Masterplan"
+# Our "Masterplan" 🚀
 
 1. Pick preprocessing methods we want to use.
 3. Implement our data pipeline in a way that we can dynamically define **used methods** and **order of appliance** 
