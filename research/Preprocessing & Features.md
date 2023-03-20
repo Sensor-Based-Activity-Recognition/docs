@@ -65,7 +65,7 @@ Decompose a signal into it's base frequencies - similar approach to GML-MC3. Fea
 
 ### Peak detection
 
-Detect peaks from a signal / Python libraries and functions: : SciPy `scipy.signal.find_peaks`
+- Detect peaks from a signal / Python libraries and functions: SciPy (`scipy.signal.find_peaks`)
 
 ## Deep learning:
 
@@ -74,3 +74,68 @@ Detect peaks from a signal / Python libraries and functions: : SciPy `scipy.sign
 A spectrogram is a visual representation of frequency with respect to time.
 - https://en.wikipedia.org/wiki/Spectrogram
 - Library: scipy.signal
+
+## Pipelines (ideas courtesy of GPT-4)
+
+Certainly! Here's a list of different data pipelines that you can try by combining various preprocessing techniques in different ways. The **order** of techniques applied in each pipeline **is crucial**, as it may impact the overall performance of the activity recognition models.
+
+Pipeline 1: Basic Preprocessing
+1. Time alignment
+2. Resampling
+3. Segmentation
+4. Feature extraction
+5. Feature scaling and normalization
+6. Model training and evaluation
+
+Pipeline 2: Filtering and Smoothing
+1. Time alignment
+2. Resampling
+3. Filtering (e.g., Butterworth filter)
+4. Smoothing (e.g., moving average)
+5. Segmentation
+6. Feature extraction
+7. Feature scaling and normalization
+8. Model training and evaluation
+
+Pipeline 3: Feature Selection
+1. Time alignment
+2. Resampling
+3. Segmentation
+4. Feature extraction
+5. Feature scaling and normalization
+6. Feature selection (e.g., PCA or RFE)
+7. Model training and evaluation
+
+Pipeline 4: Data Fusion and Augmentation
+1. Time alignment
+2. Resampling
+3. Data fusion (e.g., Euclidean norm or sensor fusion)
+4. Data augmentation (e.g., rotation or noise addition
+5. Segmentation
+6. Feature extraction
+7. Feature scaling and normalization
+8. Model training and evaluation
+
+Pipeline 5: Comprehensive Preprocessing
+1. Time alignment
+2. Resampling
+3. Filtering (e.g., Butterworth filter)
+4. Smoothing (e.g., moving average)
+5. Data fusion (e.g., Euclidean norm or sensor fusion)
+6. Data augmentation (e.g., rotation or noise addition)
+7. Segmentation
+8. Feature extraction
+9. Feature scaling and normalization
+10. Feature selection (e.g., PCA or RFE)
+11. Model training and evaluation
+
+Pipeline 6: Frequency-domain Features
+1. Time alignment
+2. Resampling
+3. Filtering (e.g., Butterworth filter)
+4. Segmentation
+5. Feature extraction (including frequency-domain features, e.g., FFT coefficients or wavelet coefficients)
+6. Feature scaling and normalization
+7. Model training and evaluation
+
+These pipelines offer various combinations of preprocessing techniques. You can compare the performance of the activity recognition models developed using these pipelines and choose the one that yields optimal results. Additionally, you can experiment with different combinations or orders of techniques to fine-tune the pipeline for your specific problem.
