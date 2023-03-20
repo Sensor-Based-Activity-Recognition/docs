@@ -20,7 +20,7 @@ Segmentation, also known as windowing, involves dividing the continuous time-ser
 
 Python libraries and functions: Custom functions using NumPy (`numpy.array`, `numpy.lib.stride_tricks.as_strided`) or using specialized libraries like tslearn (`tslearn.preprocessing.TimeSeriesResampler`, `tslearn.utils.sliding_window`).
 
-## Feature extraction
+## Feature extraction
 
 - mean/variance/sd: Calculate the mean, variance, and standard deviation of each segment to represent the central tendency, dispersion, and variability of the signal values. These features provide insights into the overall characteristics of a given activity. / Python libraries and functions: NumPy (`numpy.mean`, `numpy.var`, `numpy.std`)
 - entropy: Calculate the entropy of each segment to quantify the randomness or disorder in the data. Higher entropy values indicate more complexity or less predictability in the signal. / Python libraries and functions: SciPy (`scipy.stats.entropy`) or scikit-learn (`sklearn.metrics.cluster.entropy`)
@@ -33,26 +33,27 @@ Python libraries and functions: Custom functions using NumPy (`numpy.array`, `nu
 - min-max: Scale the features by transforming their values to a specific range, usually [0, 1]. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.MinMaxScaler`)
 - z-score normalization: Z-score normalization (also called standardization) scales the features by transforming their values to have a mean of 0 and a standard deviation of 1. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.StandardScaler`)
 
-## Feature selection
+## Feature selection
 
 Feature selection aims to identify the most relevant features from the original feature set, reducing dimensionality and computational costs while maintaining the predictive power of the model. / Python libraries and functions: scikit-learn (`sklearn.decomposition.PCA`, `sklearn.feature_selection.RFE`, `sklearn.feature_selection.SelectKBest`)
 
-## Smoothing
+## Smoothing
 
 Smoothing techniques reduce fluctuations and noise in the signals, making it easier to extract meaningful features for activity recognition. / Python libraries and functions: Moving average - NumPy or Pandas (`numpy.convolve`, `pandas.DataFrame.rolling`), Gaussian smoothing - SciPy (`scipy.ndimage.gaussian_filter`), Savitzky-Golay filtering - SciPy (`scipy.signal.savgol_filter`)
 
-## Time alignment
+## Time alignment
 
 Time alignment synchronizes the time-stamps of accelerometer and gyroscope data coming from multiple sensors or different sources, ensuring that the corresponding data points are temporally aligned. / Python libraries and functions: Pandas (`pandas.DataFrame.merge`, `pandas.DataFrame.join`, `pandas.DataFrame.interpolate`)
 
-## Data augmentation
+## Data augmentation
 
 - rotation: Rotation augmentation involves rotating the sensor data by a certain angle to simulate different orientations during data collection. / Python libraries and functions: NumPy (`numpy.dot`, rotation matrix calculation)
 - flipping: Flipping augmentation involves flipping the sensor data along one or more axes to simulate different spatial orientations during data collection. / Python libraries and functions: NumPy (`numpy.flip`)
 - interpolation: Interpolation augmentation involves creating new samples by interpolating between existing data points, increasing the size and diversity of the dataset. / Python libraries and functions: SciPy (`scipy.interpolate.interp1d`)
 - adding noise: Adding noise augmentation involves injecting artificial noise (e.g., Gaussian noise) into the sensor data, simulating real-world noise and improving the model's robustness. / Python libraries and functions: NumPy (`numpy.random.normal`)
 
-## Data fusion
+
+## Data fusion
 
 Data fusion combines accelerometer and gyroscope data in various ways to create a more comprehensive representation of the motion or activity. This can involve using raw data directly, computing the **Euclidean norm**, or applying sensor fusion techniques like the Kalman filter. / Python libraries and functions: NumPy (`numpy.linalg.norm`, raw data concatenation), filterpy (`filterpy.kalman.KalmanFilter` for Kalman filter implementation)
 
