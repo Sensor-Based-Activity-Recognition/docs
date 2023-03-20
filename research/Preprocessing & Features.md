@@ -79,7 +79,7 @@ A spectrogram is a visual representation of frequency with respect to time.
 
 Certainly! Here's a list of different data pipelines that you can try by combining various preprocessing techniques in different ways. The **order** of techniques applied in each pipeline **is crucial**, as it may impact the overall performance of the activity recognition models.
 
-Pipeline 1: Basic Preprocessing
+### Pipeline 1: Basic Preprocessing
 1. Time alignment
 2. Resampling
 3. Segmentation
@@ -87,7 +87,7 @@ Pipeline 1: Basic Preprocessing
 5. Feature scaling and normalization
 6. Model training and evaluation
 
-Pipeline 2: Filtering and Smoothing
+### Pipeline 2: Filtering and Smoothing
 1. Time alignment
 2. Resampling
 3. Filtering (e.g., Butterworth filter)
@@ -97,7 +97,7 @@ Pipeline 2: Filtering and Smoothing
 7. Feature scaling and normalization
 8. Model training and evaluation
 
-Pipeline 3: Feature Selection
+### Pipeline 3: Feature Selection
 1. Time alignment
 2. Resampling
 3. Segmentation
@@ -106,7 +106,7 @@ Pipeline 3: Feature Selection
 6. Feature selection (e.g., PCA or RFE)
 7. Model training and evaluation
 
-Pipeline 4: Data Fusion and Augmentation
+### Pipeline 4: Data Fusion and Augmentation
 1. Time alignment
 2. Resampling
 3. Data fusion (e.g., Euclidean norm or sensor fusion)
@@ -116,7 +116,7 @@ Pipeline 4: Data Fusion and Augmentation
 7. Feature scaling and normalization
 8. Model training and evaluation
 
-Pipeline 5: Comprehensive Preprocessing
+### Pipeline 5: Comprehensive Preprocessing
 1. Time alignment
 2. Resampling
 3. Filtering (e.g., Butterworth filter)
@@ -129,7 +129,7 @@ Pipeline 5: Comprehensive Preprocessing
 10. Feature selection (e.g., PCA or RFE)
 11. Model training and evaluation
 
-Pipeline 6: Frequency-domain Features
+### Pipeline 6: Frequency-domain Features
 1. Time alignment
 2. Resampling
 3. Filtering (e.g., Butterworth filter)
