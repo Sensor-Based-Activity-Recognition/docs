@@ -71,9 +71,26 @@ Decompose a signal into it's base frequencies - similar approach to GML-MC3. Fea
 
 ### Spectrogram
 
-A spectrogram is a visual representation of frequency with respect to time.
-- https://en.wikipedia.org/wiki/Spectrogram
-- Library: scipy.signal
+https://en.wikipedia.org/wiki/Spectrogram
+Library: `scipy.signal`
+
+A time-frequency-spectral map is a promising approach for activity recognition using Convolutional Neural Networks (CNNs). In this approach, you transform the raw accelerometer and gyroscope data into a time-frequency representation, such as spectrograms, which capture both time and frequency information. This representation provides richer information about the signal patterns related to different activities and allows CNNs to exploit the spatial and temporal dependencies in the data.
+
+Here's why time-frequency-spectral maps can be effective for CNNs:
+
+1. Local patterns: CNNs are capable of capturing local patterns in the input data through their convolutional layers. Time-frequency representations, like spectrograms, preserve local information about time and frequency, which can be effectively learned by CNNs.
+2. Hierarchical features: CNNs learn hierarchical features from the input data through multiple layers, starting from simple patterns to more complex ones. Time-frequency-spectral maps provide a suitable input format for CNNs to extract such hierarchical features and detect activity-specific patterns.
+3. Robustness to noise: Time-frequency representations can reduce the impact of noise in raw sensor data, making it easier for CNNs to discern relevant patterns for activity recognition.
+4. Data augmentation: Time-frequency-spectral maps can be augmented using techniques like time-shifting, frequency-shifting, or time-stretching to increase the diversity of the training data and improve the generalization capabilities of the CNN.
+
+
+To use time-frequency-spectral maps for CNNs, follow these steps:
+
+1. Transform the raw accelerometer and gyroscope data into time-frequency representations, such as spectrograms or scalograms, using techniques like Short-Time Fourier Transform (STFT) or Wavelet Transform.
+2. Use the time-frequency-spectral maps as input to the CNN, treating them as image-like data (2D arrays).
+3. Design the CNN architecture with multiple convolutional and pooling layers, followed by fully connected layers for classification.
+4. Train the CNN using the time-frequency-spectral maps and evaluate its performance on a test dataset.
+5. Fine-tune the CNN architecture, the choice of time-frequency representation, and other hyperparameters to optimize the activity recognition performance.
 
 ## Pipelines (ideas courtesy of GPT-4)
 
