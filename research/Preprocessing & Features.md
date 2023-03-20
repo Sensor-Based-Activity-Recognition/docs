@@ -14,6 +14,12 @@ Apply filters like low-pass, high-pass, or band-pass filters to remove noise fro
 - Butterworth: Butterworth filters are a type of frequency-domain filter that provide a smooth frequency response with no ripples. These filters are designed to have a maximally flat frequency response in the passband and a sharp roll-off in the stopband. / Python libraries and functions: SciPy (`scipy.signal.butter`, `scipy.signal.lfilter`, `scipy.signal.filtfilt`)
 - Chebyshev filters: Chebyshev filters are a type of frequency-domain filter characterized by their sharper roll-off compared to Butterworth filters but with ripples in the passband or stopband. There are two types of Chebyshev filters: Type I (ripples in the passband) and Type II (ripples in the stopband). These filters provide a faster transition between the passband and stopband at the expense of ripples. / Python libraries and functions: SciPy (`scipy.signal.cheby1`, `scipy.signal.cheby2`, `scipy.signal.lfilter`, `scipy.signal.filtfilt`)
 
+## Segmentation
+
+Segmentation, also known as windowing, involves dividing the continuous time-series data into smaller, fixed-length segments or sliding windows. This process captures the characteristics of different activities by isolating the relevant data portions for analysis. Segmentation is crucial for machine learning models, as it enables them to recognize patterns and features specific to each activity.
+
+Python libraries and functions: Custom functions using NumPy (`numpy.array`, `numpy.lib.stride_tricks.as_strided`) or using specialized libraries like tslearn (`tslearn.preprocessing.TimeSeriesResampler`, `tslearn.utils.sliding_window`).
+
 ## L2 Norm
 
 Euclidean norm of x, y and z axis of a sensor
