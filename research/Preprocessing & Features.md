@@ -105,11 +105,11 @@ To use time-frequency-spectral maps for CNNs, follow these steps:
 4. Train the CNN using the time-frequency-spectral maps and evaluate its performance on a test dataset.
 5. Fine-tune the CNN architecture, the choice of time-frequency representation, and other hyperparameters to optimize the activity recognition performance.
 
-## Pipelines (ideas courtesy of GPT-4)
+# Proposed Pipelines (ideas courtesy of GPT-4)
 
 Certainly! Here's a list of different data pipelines that you can try by combining various preprocessing techniques in different ways. The **order** of techniques applied in each pipeline **is crucial**, as it may impact the overall performance of the activity recognition models.
 
-### Pipeline 1: Basic Preprocessing
+## Pipeline 1: Basic Preprocessing
 
 1. Time alignment
 2. Resampling
@@ -120,7 +120,7 @@ Certainly! Here's a list of different data pipelines that you can try by combini
 
 _Traditional ML models like k-NN, SVM, or Decision Trees may work well with this pipeline, as it focuses on basic preprocessing and feature extraction._
 
-### Pipeline 2: Filtering and Smoothing
+## Pipeline 2: Filtering and Smoothing
 
 1. Time alignment
 2. Resampling
@@ -133,7 +133,7 @@ _Traditional ML models like k-NN, SVM, or Decision Trees may work well with this
 
 _As the pipeline focuses on noise reduction, both traditional ML models and deep learning models like MLP or CNN can be trained and compared._
 
-### Pipeline 3: Feature Selection
+## Pipeline 3: Feature Selection
 
 1. Time alignment
 2. Resampling
@@ -145,7 +145,7 @@ _As the pipeline focuses on noise reduction, both traditional ML models and deep
 
 _Traditional ML models, such as SVM, Decision Trees, or Logistic Regression, may benefit more from this pipeline, as feature selection can help reduce the dimensionality and improve model interpretability._
 
-### Pipeline 4: Data Fusion and Augmentation
+## Pipeline 4: Data Fusion and Augmentation
 
 1. Time alignment
 2. Resampling
@@ -158,7 +158,7 @@ _Traditional ML models, such as SVM, Decision Trees, or Logistic Regression, may
 
 _Deep learning models, such as CNN, RNN, or TCN, might work well with this pipeline, as they can handle large amounts of data and capture complex patterns._
 
-### Pipeline 5: Comprehensive Preprocessing
+## Pipeline 5: Comprehensive Preprocessing
 
 1. Time alignment
 2. Resampling
@@ -174,7 +174,7 @@ _Deep learning models, such as CNN, RNN, or TCN, might work well with this pipel
 
 _Both traditional ML and deep learning models can be trained and compared using this pipeline, as it combines multiple preprocessing techniques to optimize the input data._
 
-### Pipeline 6: Frequency-domain Features
+## Pipeline 6: Frequency-domain Features
 
 1. Time alignment
 2. Resampling
@@ -186,7 +186,7 @@ _Both traditional ML and deep learning models can be trained and compared using 
 
 _This pipeline focuses on frequency-domain features, which can be effective with traditional ML models like SVM or Decision Trees as well as deep learning models like MLP or CNN._
 
-### Pipeline 7: Time-frequency-spectral Map for CNN
+## Pipeline 7: Time-frequency-spectral Map for CNN
 
 1. Time alignment: Align the time-stamps of accelerometer and gyroscope data when using multiple sensors or different sources.
 2. Resampling: Resample the signals at a consistent sampling rate to make the data more uniform for further processing.
