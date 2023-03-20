@@ -20,23 +20,6 @@ Segmentation, also known as windowing, involves dividing the continuous time-ser
 
 Python libraries and functions: Custom functions using NumPy (`numpy.array`, `numpy.lib.stride_tricks.as_strided`) or using specialized libraries like tslearn (`tslearn.preprocessing.TimeSeriesResampler`, `tslearn.utils.sliding_window`).
 
-## Feature extraction
-
-- mean/variance/sd: Calculate the mean, variance, and standard deviation of each segment to represent the central tendency, dispersion, and variability of the signal values. These features provide insights into the overall characteristics of a given activity. / Python libraries and functions: NumPy (`numpy.mean`, `numpy.var`, `numpy.std`)
-- entropy: Calculate the entropy of each segment to quantify the randomness or disorder in the data. Higher entropy values indicate more complexity or less predictability in the signal. / Python libraries and functions: SciPy (`scipy.stats.entropy`) or scikit-learn (`sklearn.metrics.cluster.entropy`)
-- correlation: Calculate the correlation between different axes of the accelerometer and gyroscope data to quantify the degree to which the signals are related. This can help identify coordinated movements in multiple dimensions. / Python libraries and functions: NumPy (`numpy.corrcoef`) or Pandas (`pandas.DataFrame.corr`)
-- Fast Fourier Transform (FFT): Compute the FFT coefficients of each segment to transform the time-domain signal into the frequency domain. This reveals the dominant frequencies and their magnitudes, which can be useful for differentiating between activities with distinct frequency patterns. / Python libraries and functions: NumPy (`numpy.fft.fft`, `numpy.fft.fftfreq`) or SciPy (`scipy.fft.fft`, `scipy.fft.fftfreq`)
-- Wavelet Coefficients: Compute the wavelet coefficients of each segment using a wavelet transform. This transformation captures both time and frequency information, which allows for better representation of non-stationary signals commonly found in human activities. Wavelet coefficients can be used to extract relevant features for activity classification. / Python libraries and functions: PyWavelets (`pywt.wavedec`, `pywt.coeffs_to_array`, `pywt.array_to_coeffs`)
-
-## Feature scaling and normalization
-
-- min-max: Scale the features by transforming their values to a specific range, usually [0, 1]. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.MinMaxScaler`)
-- z-score normalization: Z-score normalization (also called standardization) scales the features by transforming their values to have a mean of 0 and a standard deviation of 1. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.StandardScaler`)
-
-## Feature selection
-
-Feature selection aims to identify the most relevant features from the original feature set, reducing dimensionality and computational costs while maintaining the predictive power of the model. / Python libraries and functions: scikit-learn (`sklearn.decomposition.PCA`, `sklearn.feature_selection.RFE`, `sklearn.feature_selection.SelectKBest`)
-
 ## Smoothing
 
 Smoothing techniques reduce fluctuations and noise in the signals, making it easier to extract meaningful features for activity recognition. / Python libraries and functions: Moving average - NumPy or Pandas (`numpy.convolve`, `pandas.DataFrame.rolling`), Gaussian smoothing - SciPy (`scipy.ndimage.gaussian_filter`), Savitzky-Golay filtering - SciPy (`scipy.signal.savgol_filter`)
@@ -52,7 +35,6 @@ Time alignment synchronizes the time-stamps of accelerometer and gyroscope data 
 - interpolation: Interpolation augmentation involves creating new samples by interpolating between existing data points, increasing the size and diversity of the dataset. / Python libraries and functions: SciPy (`scipy.interpolate.interp1d`)
 - adding noise: Adding noise augmentation involves injecting artificial noise (e.g., Gaussian noise) into the sensor data, simulating real-world noise and improving the model's robustness. / Python libraries and functions: NumPy (`numpy.random.normal`)
 
-
 ## Data fusion
 
 Data fusion combines accelerometer and gyroscope data in various ways to create a more comprehensive representation of the motion or activity. This can involve using raw data directly, computing the **Euclidean norm**, or applying sensor fusion techniques like the Kalman filter. / Python libraries and functions: NumPy (`numpy.linalg.norm`, raw data concatenation), filterpy (`filterpy.kalman.KalmanFilter` for Kalman filter implementation)
@@ -64,26 +46,26 @@ Euclidean norm of x, y and z axis of a sensor
 
 ## Machine learning:
 
-### FFT / PCA
+### Feature extraction (e.g. FFT)
 
-Decompose a signal into its base frequencies
-- Similar approach to GML-MC3
-- Library: scipy.fft, sklearn.decomposition.PCA
+- mean/variance/sd: Calculate the mean, variance, and standard deviation of each segment to represent the central tendency, dispersion, and variability of the signal values. These features provide insights into the overall characteristics of a given activity. / Python libraries and functions: NumPy (`numpy.mean`, `numpy.var`, `numpy.std`)
+- entropy: Calculate the entropy of each segment to quantify the randomness or disorder in the data. Higher entropy values indicate more complexity or less predictability in the signal. / Python libraries and functions: SciPy (`scipy.stats.entropy`) or scikit-learn (`sklearn.metrics.cluster.entropy`)
+- correlation: Calculate the correlation between different axes of the accelerometer and gyroscope data to quantify the degree to which the signals are related. This can help identify coordinated movements in multiple dimensions. / Python libraries and functions: NumPy (`numpy.corrcoef`) or Pandas (`pandas.DataFrame.corr`)
+- Fast Fourier Transform (FFT): Compute the FFT coefficients of each segment to transform the time-domain signal into the frequency domain. This reveals the dominant frequencies and their magnitudes, which can be useful for differentiating between activities with distinct frequency patterns. / Python libraries and functions: NumPy (`numpy.fft.fft`, `numpy.fft.fftfreq`) or SciPy (`scipy.fft.fft`, `scipy.fft.fftfreq`)
+- Wavelet Coefficients: Compute the wavelet coefficients of each segment using a wavelet transform. This transformation captures both time and frequency information, which allows for better representation of non-stationary signals commonly found in human activities. Wavelet coefficients can be used to extract relevant features for activity classification. / Python libraries and functions: PyWavelets (`pywt.wavedec`, `pywt.coeffs_to_array`, `pywt.array_to_coeffs`)
+
+### Feature scaling and normalization
+
+- min-max: Scale the features by transforming their values to a specific range, usually [0, 1]. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.MinMaxScaler`)
+- z-score normalization: Z-score normalization (also called standardization) scales the features by transforming their values to have a mean of 0 and a standard deviation of 1. It ensures that all features have equal importance during model training. / Python libraries and functions: scikit-learn (`sklearn.preprocessing.StandardScaler`)
+
+### Feature selection (e.g. PCA)
+
+Decompose a signal into it's base frequencies - similar approach to GML-MC3. Feature selection aims to identify the most relevant features from the original feature set, reducing dimensionality and computational costs while maintaining the predictive power of the model. / Python libraries and functions: scikit-learn (`sklearn.decomposition.PCA`, `sklearn.feature_selection.RFE`, `sklearn.feature_selection.SelectKBest`)
 
 ### Peak detection
 
-Detect peaks from a signal
-- Library: scipy.signal.find_peaks
-
-### Mean
-
-Mean value of an axis
-- numpy.mean
-
-### Standard deviation
-
-Standard deviation of an axis
-- numpy.std
+Detect peaks from a signal / Python libraries and functions: : SciPy `scipy.signal.find_peaks`
 
 ## Deep learning:
 
