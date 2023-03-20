@@ -1,3 +1,15 @@
+# "Our Masterplan"
+
+1. Pick preprocessing methods we want to use
+2. Implement our data pipeline in a way that we can dynamically define 1. used methods and 2. order (e.g. array-like [LowPass, MA, FFT...])
+3. Pick models we want to train. Based on paper research:
+  - ML: KNN/SVM as Baseline, Random Forest, Adaboost Stump
+  - DL: 2D-CNN (optionally RNN)
+5. Continous Iteration:
+  - Define several pipelines and train our ML/DL models on the data
+  - Evaluate model performance (W&B) and tune hyperparams
+6. Have some great performing models :)
+
 # Proposed preprocessing
 
 ## Resampling
