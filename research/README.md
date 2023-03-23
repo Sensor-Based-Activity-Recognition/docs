@@ -1,5 +1,7 @@
 # Research Paper Overview
 
+[Masterplan](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/research/Preprocessing%20%26%20Features.md)
+
 Survey Studies
 - [Deep Learning for Sensor-based Human Activity Recognition: Overview, Challenges, and Opportunities](Chen_2021.md)
 - [Smartphone based human activity monitoring and recognition using ML and DL: a comprehensive survey](Thakur_Biswas_2020.md)
