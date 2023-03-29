@@ -6,10 +6,15 @@ Hier liegt eine Beschreibung zur Analyse der einzelnen Sensoren:
 
 ### Accelerometer
 #### Was macht der Sensor?
-#### Was wie sehen die Daten aus?
+Der Beschleunigungssensor misst die Beschleunigung des Geräts auf allen Achsen (x,y,z). Im Smartphone hat er die Aufgabe, die derzeitige Lage des Geräts und ihre Veränderungen zu erkennen. Beim Drehen des Smartphones verändert sich die Richtung, aus der die Schwerkraft auf das Gerät wirkt.
+#### Wie sehen die Daten aus?
+Die Beschleunigung ist bei den Unterschiedlichen Aktivitäten erkennbar anders. Zusätzlich zeigt der y-Sensor (Entlang des Beins) interessante Muster, die sehr wahrscheinlich auf die Position des Handys in der vorderen Linken Hosentasche bei den Messungen zurückzuführen sind.
+<img width="1120" alt="image" src="https://user-images.githubusercontent.com/22744751/228468538-b89959c2-017e-4d4d-8d93-b353cb2d8d6e.png">
+
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
+Bei den verschiedenen Aktivitäten sind deutliche Unterschiede in der Verteilung und Intensität der Messungen zu erkennen. 
 #### Nehmen wir diesen Sensor für unsere Modelle?
-Ja, weil...
+Ja, weil in der EDA klare Unterschiede der Sensormessungen bei den Aktivitäten zu erkennen waren. Wir gehen davon aus, dass dieser Sensor eine wichtige Grundlage für die Klassifizierung der Aktiviäten bilden wird. Auch in anderen Studien ist dieser Sensor oft sehr zentral.
 
 ### Gravity
 #### Was macht der Sensor?
