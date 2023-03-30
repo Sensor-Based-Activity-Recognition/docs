@@ -31,7 +31,7 @@ Nein, weil dieser Sensor nicht physisch vorhanden ist. Möglicherweise kann das 
 #### Was macht der Sensor?
 Der Sensor misst die Rotation um die einzelnen Achsen.
 #### Wie sehen die Daten aus?
-Periodische Muster zu erkennen.
+Periodische Muster sind zu erkennen.
 Bei einzelnen Personen sind verglichen zu anderen Personen viele Nan's vorhanden (bis 0.35% pro Aktivität).
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
 Periodische Muster sind via FFT qualitativ gut zu unterscheiden. 
