@@ -42,10 +42,13 @@ Ja, weil dieser Sensor mit grosser Wahrscheindlichkeit physisch vorhanden ist un
 
 ### Magnetometer
 #### Was macht der Sensor?
+Er misst die Richtung des magnetischen Nordens aus sicht des Smartphones im Microteslas.
 #### Wie sehen die Daten aus?
+Es sind periodische Muster zu erkennen. Es wird die x-, y- und z-Ausrichtung angegeben.
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
+So semi, weil zwar periodische Muster zu erkennen sind. Aber darüber ist auch noch die Ausrichtung des Gerätes versteckt, was man zuerst richtig bereinigen muss.
 #### Nehmen wir diesen Sensor für unsere Modelle?
-Ja, weil...
+Ja, weil wir periodische Muster erkennen können.
 
 ### Barometer
 #### Was macht der Sensor?
