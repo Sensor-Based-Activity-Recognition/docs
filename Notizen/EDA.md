@@ -52,10 +52,13 @@ Ja, weil wir periodische Muster erkennen können.
 
 ### Barometer
 #### Was macht der Sensor?
+Er misst den athmosphärischen Druck in Hekto-Pascal und berechnet dadurch die relative Höhe. 
 #### Wie sehen die Daten aus?
+Sehr starke Schwankungen. Der Moving Average muss eine Minute betragen, um das Rauschen loszuwerden.
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
+Nicht sehr nützlich, weil es ein sehr grosses Rauschen hat und die Windows gross sein müssen um etwas zu erkennen.
 #### Nehmen wir diesen Sensor für unsere Modelle?
-Nein, weil...
+Nein, weil es viel Rauschen in den Daten hat und die Höhenveränderung unserer Meinung nach keine guten Rückschlüsse auf die Aktivität zulassen.
 
 ### LocationGPS
 #### Was macht der Sensor?
