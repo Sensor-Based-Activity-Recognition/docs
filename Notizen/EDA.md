@@ -19,7 +19,7 @@ Ja, weil in der EDA klare Unterschiede der Sensormessungen bei den Aktivitäten 
 ### Gravity
 #### Was macht der Sensor?
 Software Sensor berechnet die auf die verschiedenen Achsen wirkende Schwerkraft.
-#### Was wie sehen die Daten aus?
+#### Wie sehen die Daten aus?
 L2 norm ergibt fast immer 9.81 m/s^2 und schwankt um ca +- 2E-5 m/s^2. Periodische Muster zu erkennen.
 Bei einzelnen Personen sind verglichen zu anderen Personen viele Nan's vorhanden (bis 0.35% pro Aktivität).
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
@@ -30,7 +30,7 @@ Nein, weil dieser Sensor nicht physisch vorhanden ist. Möglicherweise kann das 
 ### Gyroskop
 #### Was macht der Sensor?
 Der Sensor misst die Rotation um die einzelnen Achsen.
-#### Was wie sehen die Daten aus?
+#### Wie sehen die Daten aus?
 Periodische Muster zu erkennen.
 Bei einzelnen Personen sind verglichen zu anderen Personen viele Nan's vorhanden (bis 0.35% pro Aktivität).
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
@@ -42,21 +42,25 @@ Ja, weil dieser Sensor mit grosser Wahrscheindlichkeit physisch vorhanden ist un
 
 ### Magnetometer
 #### Was macht der Sensor?
-#### Was wie sehen die Daten aus?
+#### Wie sehen die Daten aus?
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
 #### Nehmen wir diesen Sensor für unsere Modelle?
 Ja, weil...
 
 ### Barometer
 #### Was macht der Sensor?
-#### Was wie sehen die Daten aus?
+#### Wie sehen die Daten aus?
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
 #### Nehmen wir diesen Sensor für unsere Modelle?
 Nein, weil...
 
 ### LocationGPS
 #### Was macht der Sensor?
-#### Was wie sehen die Daten aus?
+Dieser Sensor misst die Koordinaten des Endgeräts.
+#### Wie sehen die Daten aus?
+Die Spalten LocationGps_latitude und LocationGps_longitute enthalten Koordinaten in der Decimal Degrees Notation.
+Jedoch sind nur wenige Daten vorhanden (Ingesamt nur 2018 Datensätze).
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
+Da wir nur Daten für Tobias erhalten haben, nützen uns diese Daten nicht.
 #### Nehmen wir diesen Sensor für unsere Modelle?
-Nein, weil...
+Nein, da fast alle OBservationen keinen Wert beinhalten.
