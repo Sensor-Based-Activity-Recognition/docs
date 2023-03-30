@@ -71,6 +71,6 @@ Er misst die Orientation in die x, y und z Achse.
 #### Wie sehen die Daten aus?
 Leider haben wir nur NA Werte.
 #### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
--
+Garnicht, da wir keine Daten haben.
 #### Nehmen wir diesen Sensor für unsere Modelle?
 Nein, da wir keine Daten haben.
