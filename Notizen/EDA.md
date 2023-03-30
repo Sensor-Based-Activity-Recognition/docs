@@ -64,3 +64,13 @@ Jedoch sind nur wenige Daten vorhanden (Ingesamt nur 2018 Datensätze).
 Da wir nur Daten für Tobias erhalten haben, nützen uns diese Daten nicht.
 #### Nehmen wir diesen Sensor für unsere Modelle?
 Nein, da fast alle OBservationen keinen Wert beinhalten.
+
+### Orientation
+#### Was macht der Sensor?
+Er misst die Orientation in die x, y und z Achse.
+#### Wie sehen die Daten aus?
+Leider haben wir nur NA Werte.
+#### Wie nützlich sind die Daten für die Klassifikation der Aktivitäten?
+-
+#### Nehmen wir diesen Sensor für unsere Modelle?
+Nein, da wir keine Daten haben.
