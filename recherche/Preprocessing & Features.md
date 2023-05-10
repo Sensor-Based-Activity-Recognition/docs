@@ -86,7 +86,7 @@ Decompose a signal into it's base frequencies - similar approach to GML-MC3. Fea
 
 A time-frequency-spectral map is a promising approach for activity recognition using Convolutional Neural Networks (CNNs). In this approach, you transform the raw accelerometer and gyroscope data into a time-frequency representation, such as spectrograms, which capture both time and frequency information. This representation provides richer information about the signal patterns related to different activities and allows CNNs to exploit the spatial and temporal dependencies in the data.
 
-See insights in paper [Chen_2021](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/research/Chen_2021.md#4-insights)
+See insights in paper [Chen_2021](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/recherche/Chen_2021.md#4-insights)
 
 https://en.wikipedia.org/wiki/Spectrogram / Library: `scipy.signal`
 
