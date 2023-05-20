@@ -16,6 +16,10 @@ In diesem Repository befinden sich unsere Datenpipelines und unsere Machine Lear
 Die Pipeline wurde mit DVC erstellt und wir auch damit ausgeführt.
 Siehe [Pipelines](https://githun.com/Sensor-Based-Activity-Recognition/pipelines).
 
+### mobile-app
+In diesem Repository befindet sich unsere Mobile App, in der unser Modell genutzt werden kann, um Activity Recognition durchzuführen. Die App basiert auf React Native, und funktioniert dadurch auf Android sowie iOS.
+https://github.com/Sensor-Based-Activity-Recognition/mobile-app
+
 ## Weitere Informationen
 ### Konzept
 Hier ist unser Konzept für die Arbeit.
