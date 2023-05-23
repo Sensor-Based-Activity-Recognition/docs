@@ -18,7 +18,11 @@ Siehe [Pipelines](https://githun.com/Sensor-Based-Activity-Recognition/pipelines
 
 ### mobile-app
 In diesem Repository befindet sich unsere Mobile App, in der unser Modell genutzt werden kann, um Activity Recognition durchzuführen. Die App basiert auf React Native, und funktioniert dadurch auf Android sowie iOS.
-https://github.com/Sensor-Based-Activity-Recognition/mobile-app
+[Mobile App](https://github.com/Sensor-Based-Activity-Recognition/mobile-app)
+
+### api
+In diesem Repository befindet sich eine API, die von unserer Mobile App genutzt wird, um Activity Recognition durchzuführen. Die API basiert auf Django und beinhaltet zwei REST Schnittstellen.
+[Api](https://github.com/Sensor-Based-Activity-Recognition/api)
 
 ## Weitere Informationen
 ### Konzept
