@@ -8,6 +8,7 @@ The spectograms were created using `scipy.signal.stft`. The parameters are as fo
 - `noverlap`: We set the overlap of the segments to 95. This corresponds to an overlap of 95% or 1.9 seconds.
 
 A spectogram then looks like this:
+
 ![Spectogramm](./images/rennen_spectrogram.png)
 
 ## CNN
