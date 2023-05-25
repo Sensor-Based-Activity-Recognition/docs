@@ -45,3 +45,36 @@ The model achieves a Performance of over 90% on the test set on the Accuracy. He
 |:------------------:|----------------------------:|
 |  test_acc_epoch    |     0.922       |
 |  test_f1_epoch     |     0.915       |
+
+# HistGradientBoostingClassifier
+This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
+
+## Features
+As an input for out processing pipeline, we are using following features (All features share the same timestamp):
+- Accelerometer X axis (unclalibrated)
+- Accelerometer Y axis (unclalibrated)
+- Accelerometer Z axis (unclalibrated)
+- Gyroscope X axis (unclalibrated)
+- Gyroscope Y axis (unclalibrated)
+- Gyroscope Z axis (unclalibrated)
+- Magnetometer X axis (unclalibrated)
+- Magnetometer Y axis (unclalibrated)
+- Magnetometer Z axis (unclalibrated)
+
+Afterwards the observations (consisting from a timestamp and all features above) are resampled with a linear interpolation to 50Hz.
+
+Next, each recording is split into 5s segments.
+
+Finally, for each semgent, each feature is projected into the frequency spectrum space.
+
+Stepping forward in the pipeline, a train test split is performed (train: random 80% of all segments, test: random 20% of all segments)
+
+Before training the model, the features are stacked column wise, transforming each segment to a single row. All rows are stacked to matrix which will be fed into the model.
+
+## Results
+The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
+
+|     Test metric    |        DataLoader 0         |
+|:------------------:|----------------------------:|
+|  test_acc_epoch    |     0.98525       |
+|  test_f1_epoch     |     0.98363       |
