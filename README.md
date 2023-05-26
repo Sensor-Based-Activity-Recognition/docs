@@ -33,6 +33,10 @@ Siehe [Konzept.md](Konzept.md).
 Hier sind alle Zusammenfassungen zu den Papers, die wir gelesen und für unsere Arbeit benutzt haben.
 Siehe [Research](recherche/README.md).
 
+### Unsere Modelle
+Hier befindet sich die Architektur und Resultate unserer verwendeten Moodelle.
+Siehe [Modelle](Modelle.md).
+
 ### Notizen
 Hier sind alle Notizen, die wir während der Arbeit gemacht haben.
 Siehe [2023_02_23_DataMeeting.md](notizen/2023_02_23_DataMeeting.md).
