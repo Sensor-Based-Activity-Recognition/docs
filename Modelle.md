@@ -71,6 +71,23 @@ Stepping forward in the pipeline, a train test split is performed (train: random
 
 Before training the model, the features are stacked column wise, transforming each segment to a single row. All rows are stacked to matrix which will be fed into the model.
 
+## DAG/Stages
+```mermaid
+flowchart TD
+    node1["dvclive"]
+    node2["fft"]
+    node3["pull_data_calibrated"]
+    node4["resample_50Hz"]
+    node5["segmentate_5s"]
+    node6["train_test_split_ratio02"]
+    node2-->node1
+    node3-->node4
+    node4-->node5
+    node5-->node2
+    node5-->node6
+    node6-->node1
+```
+
 ## Results
 The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
 
