@@ -14,7 +14,7 @@ Siehe [Explorative Datenanalysis](https://github.com/Sensor-Based-Activity-Recog
 ### pipelines
 In diesem Repository befinden sich unsere Datenpipelines und unsere Machine Learning und Deep Learning Modelle.
 Die Pipeline wurde mit DVC erstellt und wir auch damit ausgeführt.
-Siehe [Pipelines](https://githun.com/Sensor-Based-Activity-Recognition/pipelines).
+Siehe [Pipelines](https://github.com/Sensor-Based-Activity-Recognition/pipelines).
 
 ### mobile-app
 In diesem Repository befindet sich unsere Mobile App, in der unser Modell genutzt werden kann, um Activity Recognition durchzuführen. Die App basiert auf React Native, und funktioniert dadurch auf Android sowie iOS.
@@ -32,6 +32,10 @@ Siehe [Konzept.md](Konzept.md).
 ### Recherche
 Hier sind alle Zusammenfassungen zu den Papers, die wir gelesen und für unsere Arbeit benutzt haben.
 Siehe [Research](recherche/README.md).
+
+### Unsere Modelle
+Hier befindet sich die Architektur und Resultate unserer verwendeten Modelle.
+Siehe [Modelle](Modelle.md).
 
 ### Notizen
 Hier sind alle Notizen, die wir während der Arbeit gemacht haben.
