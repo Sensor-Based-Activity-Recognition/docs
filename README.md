@@ -34,7 +34,7 @@ Hier sind alle Zusammenfassungen zu den Papers, die wir gelesen und für unsere 
 Siehe [Research](recherche/README.md).
 
 ### Unsere Modelle
-Hier befindet sich die Architektur und Resultate unserer verwendeten Moodelle.
+Hier befindet sich die Architektur und Resultate unserer verwendeten Modelle.
 Siehe [Modelle](Modelle.md).
 
 ### Notizen
