@@ -91,7 +91,7 @@ flowchart TD
 ## Results
 The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
 
-|     Test metric    |        DataLoader 0         |
+|     Test metric    |        Test Data         |
 |:------------------:|----------------------------:|
 |  test_acc_epoch    |     0.98525       |
 |  test_f1_epoch     |     0.98363       |
