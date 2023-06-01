@@ -51,15 +51,15 @@ This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ens
 
 ## Features
 As an input for out processing pipeline, we are using following features (All features share the same timestamp):
-- Accelerometer X axis (unclalibrated)
-- Accelerometer Y axis (unclalibrated)
-- Accelerometer Z axis (unclalibrated)
-- Gyroscope X axis (unclalibrated)
-- Gyroscope Y axis (unclalibrated)
-- Gyroscope Z axis (unclalibrated)
-- Magnetometer X axis (unclalibrated)
-- Magnetometer Y axis (unclalibrated)
-- Magnetometer Z axis (unclalibrated)
+- Accelerometer X axis (uncalibrated)
+- Accelerometer Y axis (uncalibrated)
+- Accelerometer Z axis (uncalibrated)
+- Gyroscope X axis (uncalibrated)
+- Gyroscope Y axis (uncalibrated)
+- Gyroscope Z axis (uncalibrated)
+- Magnetometer X axis (uncalibrated)
+- Magnetometer Y axis (uncalibrated)
+- Magnetometer Z axis (uncalibrated)
 
 Afterwards the observations (consisting from a timestamp and all features above) are resampled with a linear interpolation to 50Hz.
 
