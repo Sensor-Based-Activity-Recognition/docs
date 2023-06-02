@@ -2,7 +2,7 @@
 
 ## Masterplan
 Hier ist unser Masterplan für die Arbeit. Diesen haben wir in der ersten Iteration erstellt und dient als Inspiration für den weiteren Verlauf der Arbeit.
-- [Masterplan](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/research/Masterplan.md)
+- [Masterplan](Masterplan.md)
 
 ## Survey Studies
 - [Deep Learning for Sensor-based Human Activity Recognition: Overview, Challenges, and Opportunities](Chen_2021.md)
