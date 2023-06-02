@@ -37,6 +37,10 @@ Siehe [Research](recherche/README.md).
 Hier befindet sich die Architektur und Resultate unserer verwendeten Modelle.
 Siehe [Modelle](Modelle.md).
 
+### Systemarchitektur
+Hier befindet sich die Architektur unseres Systems.
+Siehe [Architektur](Architektur.md).
+
 ### Notizen
 Hier sind alle Notizen, die wir während der Arbeit gemacht haben.
 Siehe [2023_02_23_DataMeeting.md](notizen/2023_02_23_DataMeeting.md).

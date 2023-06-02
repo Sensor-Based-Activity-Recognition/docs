@@ -116,3 +116,53 @@ The model achieves a very Bad performance and isn't considered for future use, s
 |:------------------:|----------------------------:|
 |  test_acc_epoch    |     0.229       |
 |  test_f1_epoch     |     0.062       |
+
+# HistGradientBoostingClassifier
+This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
+
+## Features
+As an input for out processing pipeline, we are using following features (All features share the same timestamp):
+- Accelerometer X axis (uncalibrated)
+- Accelerometer Y axis (uncalibrated)
+- Accelerometer Z axis (uncalibrated)
+- Gyroscope X axis (uncalibrated)
+- Gyroscope Y axis (uncalibrated)
+- Gyroscope Z axis (uncalibrated)
+- Magnetometer X axis (uncalibrated)
+- Magnetometer Y axis (uncalibrated)
+- Magnetometer Z axis (uncalibrated)
+
+Afterwards the observations (consisting from a timestamp and all features above) are resampled with a linear interpolation to 50Hz.
+
+Next, each recording is split into 5s segments.
+
+Finally, for each semgent, each feature is projected into the frequency spectrum space.
+
+Stepping forward in the pipeline, a train test split is performed (train: random 80% of all segments, test: random 20% of all segments)
+
+Before training the model, the features are stacked column wise, transforming each segment to a single row. All rows are stacked to matrix which will be fed into the model.
+
+## DAG/Stages
+```mermaid
+flowchart TD
+    node1["dvclive"]
+    node2["fft"]
+    node3["pull_data_calibrated"]
+    node4["resample_50Hz"]
+    node5["segmentate_5s"]
+    node6["train_test_split_ratio02"]
+    node2-->node1
+    node3-->node4
+    node4-->node5
+    node5-->node2
+    node5-->node6
+    node6-->node1
+```
+
+## Results
+The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
+
+|     Test metric    |        Test Data         |
+|:------------------:|----------------------------:|
+|  test_acc_epoch    |     0.98525       |
+|  test_f1_epoch     |     0.98363       |
