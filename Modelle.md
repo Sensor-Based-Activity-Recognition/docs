@@ -177,16 +177,6 @@ flowchart TD
 
 The data is pulled from the database and then resampled to 50Hz. After that, it is split into 5 second windows. Then the train_test_split_ratio02 marks 20% of the segments for testing and keeps the other 80% for training. In the featurize stage, feature extraction methods are applied to the sensor data as described in the next section. The dvclive stage trains the AdaBoost Stump model and the evaluate stage provides model performance metrics.
 
-## Featurization
-
-The featurization stage applies several statistical functions to the sensor data to create a high-dimensional feature vector for each segment. The functions applied include:
-
-- Mean
-- Standard deviation
-- Median
-- Minimum
-- Maximum
-
 ## Model Architecture
 
 The AdaBoost Stump classifier works by combining several weak learners (in this case, decision stumps) into a strong classifier. Each decision stump is trained to minimize the error on the training data, and the contribution of each stump to the final decision is weighted by its accuracy.
