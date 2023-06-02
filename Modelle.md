@@ -66,6 +66,39 @@ The model achieves a Performance of over 90% on the test set on the Accuracy. He
 |  test_acc_epoch    |     0.922       |
 |  test_f1_epoch     |     0.915       |
 
+# MLP
+The MLP is a simple, self-made model, we used as a placeholder. For this model we use the same spectrograms we used with the CNN model.
+
+## DAG/Stages
+We used the same Stages as in the CNN model.
+
+## MLP
+The model architecture consists of three fully connected linear layers. Here's a breakdown of the model:
+
+- Flattener: Flattens the STFT and all 9 Channels into an array.
+- Linear Layer 1: Takes the flattened array and maps it into an output array of 500.
+- Linear Layer 2: Takes the array of 500 and maps it into an output array of 100.
+- Linear Layer 3: Takes the array of 100 and maps it into an output array of 6.
+
+### Model Parameters
+Here's a summary of the trainable parameters in the model:
+
+| Name     | Type               | Params
+|----------|:------------------:|---------------:|
+| fc1      | Linear             | 11.7 M         |
+| fc2      | Linear             | 50.1 K         |
+| fc3      | Linear             | 606            |
+
+Total params: 11.8 M
+
+## Results
+The model achieves a very Bad performance and isn't considered for future use, since we have a better Deep Learning Model.
+
+|     Test metric    |        DataLoader 0         |
+|:------------------:|----------------------------:|
+|  test_acc_epoch    |     0.229       |
+|  test_f1_epoch     |     0.062       |
+
 # HistGradientBoostingClassifier
 This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
 
