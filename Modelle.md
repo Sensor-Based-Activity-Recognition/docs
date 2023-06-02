@@ -2,40 +2,22 @@
 The CNN is based on the paper by [Chen 2021](./recherche/Chen_2021.md). As described in the paper, we created spectrograms from the sensor data using the Short-Time Fourier Transform. We implemented the CNN using PyTorch and customized it a bit.
 
 ## DAG/Stages
-```
-     +----------------------+
-     | pull_data_calibrated |
-     +----------------------+
-                 *
-                 *
-                 *
-        +---------------+
-        | resample_50Hz |
-        +---------------+
-                 *
-                 *
-                 *
-        +---------------+
-        | segmentate_5s |
-        +---------------+
-          **           **
-        **               **
-      **                   **
-+------+        +--------------------------+
-| stft |        | train_test_split_ratio02 |
-+------+**      +--------------------------+
-          **           **
-            **       **
-              **   **
-            +---------+
-            | dvclive |
-            +---------+
-                 *
-                 *
-                 *
-           +----------+
-           | evaluate |
-           +----------+
+```mermaid
+flowchart TD
+        node1["dvclive"]
+        node2["evaluate"]
+        node3["stft"]
+        node4["pull_data_calibrated"]
+        node5["resample_50Hz"]
+        node6["segmentate_5s"]
+        node7["train_test_split_ratio02"]
+        node1-->node2
+        node3-->node1
+        node4-->node5
+        node5-->node6
+        node6-->node3
+        node6-->node7
+        node7-->node1
 ```
 The data is pulled from the database and then resampled to 50Hz. After that, it is split into 5 second windows. Then the train_test_split_ration02 marks 20% of the segments for testing and keeps the other 80% for the training. In the stft stage, the Spectrograms are created as described in the next section. The dvclive stage trains the model and the evaluate stage creates a confusion matrix to analyze the types errors the CNN makes. 
 
