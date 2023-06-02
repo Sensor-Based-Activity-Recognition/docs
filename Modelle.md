@@ -193,7 +193,7 @@ The AdaBoost Stump classifier works by combining several weak learners (in this 
 
 ## Results
 
-The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set.
+The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
 
 |     Test metric    |        Test Data         |
 |:------------------:|----------------------------:|
