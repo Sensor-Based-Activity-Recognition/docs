@@ -66,6 +66,8 @@ The model achieves a Performance of over 90% on the test set on the Accuracy. He
 |  test_acc_epoch    |     0.922       |
 |  test_f1_epoch     |     0.915       |
 
+CML Report: https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/98#issuecomment-1564147778
+
 # MLP
 The MLP is a simple, self-made model, we used as a placeholder. For this model we use the same spectrograms we used with the CNN model.
 
@@ -148,3 +150,5 @@ The model achieves a Performance of over 98% on the test set on the Accuracy. He
 |:------------------:|----------------------------:|
 |  test_acc_epoch    |     0.98525       |
 |  test_f1_epoch     |     0.98363       |
+
+CML Report: https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/99#issuecomment-1564102269
