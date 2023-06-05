@@ -48,3 +48,7 @@ Siehe [2023_02_23_DataMeeting.md](notizen/2023_02_23_DataMeeting.md).
 ### Taskboard
 Das Taskboard mit allen Iterationen und Tasks ist hier zu finden:
 Siehe [Taskboard](https://github.com/orgs/Sensor-Based-Activity-Recognition/projects/1/views/1)
+
+### Ergebnisse und Erkenntnisse
+Hier ist eine Zusammenfassung der Ergebnisse und Erkenntnisse, die wir während der Arbeit gemacht haben.
+Siehe [Zusammenfassung](Zusammenfassung.md).
