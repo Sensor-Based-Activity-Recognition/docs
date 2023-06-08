@@ -31,7 +31,7 @@ A spectogram then looks like this:
 
 ![Spectogramm](./images/rennen_spectrogram.png)
 
-## CNN
+## Model Architecture
 The model architecture consists of four convolutional layers each followed by pooling layers. After the convolution part, a global average pooling layer and two fully connected layers follow. Here's a breakdown of the model:
 
 - Convolutional Layer 1: Takes input with 9 channels, applies 32 filters of size 5x5.
@@ -72,7 +72,7 @@ The MLP is a simple, self-made model, we used as a placeholder. For this model w
 ## DAG/Stages
 We used the same Stages as in the CNN model.
 
-## MLP
+## Model Architecture
 The model architecture consists of three fully connected linear layers. Here's a breakdown of the model:
 
 - Flattener: Flattens the STFT and all 9 Channels into an array.
@@ -104,6 +104,7 @@ This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ens
 
 ## Features
 As an input for out processing pipeline, we are using following features (All features share the same timestamp):
+
 - Accelerometer X axis (uncalibrated)
 - Accelerometer Y axis (uncalibrated)
 - Accelerometer Z axis (uncalibrated)
@@ -148,3 +149,49 @@ The model achieves a Performance of over 98% on the test set on the Accuracy. He
 |:------------------:|----------------------------:|
 |  test_acc_epoch    |     0.98525       |
 |  test_f1_epoch     |     0.98363       |
+
+# AdaBoost Stump
+
+This model uses the **AdaBoostClassifier** from sklearn `sklearn.ensemble.AdaBoostClassifier`, with the base estimator set to **DecisionTreeClassifier** from sklearn `sklearn.tree.DecisionTreeClassifier` with a maximum depth of 1. The AdaBoost Stump is a variant of the AdaBoost algorithm that uses decision stumps (decision trees with one split) as base estimators. It is particularly effective for high-dimensional datasets where each feature contributes a small amount of information to the final decision.
+
+A survey study in our initial research [Thakur Biswas 2020](./recherche/Thakur_Biswas_2020.md) pointed towards `AdaBoostStump` to be a classifier well fit for activity recognition, it outperformed most other model types in accuracy. Specifically the paper "An Automatic User-Adapted Physical Activity Classification Method Using Smartphones" (Li 2017) used `AdaBoostStump` for activity recognition and achieved an accuracy of 98% on the WISDM dataset.
+
+## DAG/Stages
+```mermaid
+flowchart TD
+        node1["dvclive"]
+        node2["evaluate"]
+        node3["fft"]
+        node4["pull_data_calibrated"]
+        node5["resample_50Hz"]
+        node6["segmentate_5s"]
+        node7["train_test_split_ratio02"]
+        node1-->node2
+        node3-->node1
+        node4-->node5
+        node5-->node6
+        node6-->node3
+        node6-->node7
+        node7-->node1  
+```
+
+The data is pulled from the database and then resampled to 50Hz. After that, it is split into 5 second windows. Then the train_test_split_ratio02 marks 20% of the segments for testing and keeps the other 80% for training. In the featurize stage, feature extraction methods are applied to the sensor data as described in the next section. The dvclive stage trains the AdaBoost Stump model and the evaluate stage provides model performance metrics.
+
+## Model Architecture
+
+The AdaBoost Stump classifier works by combining several weak learners (in this case, decision stumps) into a strong classifier. Each decision stump is trained to minimize the error on the training data, and the contribution of each stump to the final decision is weighted by its accuracy.
+
+## Results
+
+The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
+
+|     Test metric    |        Test Data         |
+|:------------------:|----------------------------:|
+|  test_acc_epoch    |     0.57050       |
+|  test_f1_epoch     |     0.57708       |
+
+As we had an already great performing HistGradientBoostingClassifier model, we decided to not further investigate the AdaBoost Stump model.
+
+# References
+
+- Li, P., Wang, Y., Tian, Y., Zhou, T. S., & Li, J. S. (2017). An Automatic User-Adapted Physical Activity Classification Method Using Smartphones. IEEE transactions on bio-medical engineering, 64(3), 706–714. https://doi.org/10.1109/TBME.2016.2573045
