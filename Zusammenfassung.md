@@ -40,10 +40,12 @@ Der Vergleich der beiden Modelle ergab, dass sowohl das CNN-Modell als auch das 
 
 ### CNN
 ![CNN](https://camo.githubusercontent.com/869810d6236d40f10cca37f6a4fa1f4e2d46ff7075a7b900d460eac015d16e8b/68747470733a2f2f61737365742e636d6c2e6465762f346362636264356361326234613039373439363732656661346135313037376534326263663939373f636d6c3d706e672663616368652d6279706173733d33333434643863392d386564342d346135312d616430652d613230636635306230666132)
+
 Das CNN-Modell kann fast alle Klassen gut klassifizieren. Jedoch hat dieses Modell ein wenig Probleme bei der Unterscheidung von der Klasse "Sitzen" und "Stehen". Gleichzeitig klassifiert es einige "Treppenlaufen" Segmente als "Laufen". Dies könnte daran liegen, dass während der Aufnahme vom Treppenlaufen zwischen den Treppen auch flache Ebenen gab, bei welcher die User zur nächsten Treppe liefen. 
 
 ### HGBC
 ![HGBC](https://camo.githubusercontent.com/e80faa884c2a22bbcbb4667eb8a8fb6544717f184e4ecebc733d16370d1eab8f/68747470733a2f2f61737365742e636d6c2e6465762f613031386532363931663036633332643738383737306430353261353533313438616433303134383f636d6c3d706e672663616368652d6279706173733d35643731363330382d613237302d343564332d623633342d636366613865396235616436)
+
 Das HGBC-Modell hat bei der Klassifizierung die gleichen Probleme wie das CNN, insbesondere bei der Unterscheidung von "Sitzen" & "Stehen" sowie "Treppenlaufen" & "Laufen". Dennoch kann dieses Modell diese Probleme deutlich besser bewältigen als das CNN.
 
 ### Sicherheit bei der Klassifikation
