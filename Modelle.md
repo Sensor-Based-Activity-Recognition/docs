@@ -66,7 +66,7 @@ The model achieves a Performance of over 90% on the test set on the Accuracy. He
 |  10 fold cv mean test accuracy    |     0.906 +- 0.0288     |
 |  10 fold cv mean test macro f1 score    |     0.897 +- 0.0326      |
 
-CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/98#issuecomment-1564147778)
+CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/109#issuecomment-1584413452))
 
 # MLP
 The MLP is a simple, self-made model, we used as a placeholder. For this model we use the same spectrograms we used with the CNN model.
@@ -152,7 +152,7 @@ The model achieves a Performance of over 98% on the test set on the Accuracy. He
 |  10 fold cv mean test accuracy    |     0.984 +- 0.0034     |
 |  10 fold cv mean test macro f1 score    |     0.982 +- 0.0039      |
 
-CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/99#issuecomment-1564102269)
+CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/106#issuecomment-1584297162)
 
 # AdaBoost Stump
 
