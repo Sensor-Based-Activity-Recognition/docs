@@ -39,14 +39,22 @@ Das HGBC-Modell verwendet den [HistGradientBoostingClassifier](https://scikit-le
 Der Vergleich der beiden Modelle ergab, dass sowohl das CNN-Modell als auch das HGBC-Modell beeindruckende Ergebnisse erzielten.
 
 ### CNN
-![CNN](https://camo.githubusercontent.com/950d1d27d04bb036fe6c75a19a0ba25f7d33c515742af690c83350300f13cf2a/68747470733a2f2f61737365742e636d6c2e6465762f333130666232643939393662656562393439653034633438343962646461656466653361376662333f636d6c3d706e672663616368652d6279706173733d31663538623465622d383135662d343132352d613032622d303364643266666536306131)
+![CNN Confusion Matrix](https://camo.githubusercontent.com/950d1d27d04bb036fe6c75a19a0ba25f7d33c515742af690c83350300f13cf2a/68747470733a2f2f61737365742e636d6c2e6465762f333130666232643939393662656562393439653034633438343962646461656466653361376662333f636d6c3d706e672663616368652d6279706173733d31663538623465622d383135662d343132352d613032622d303364643266666536306131)
 
-Das CNN-Modell kann fast alle Klassen gut klassifizieren. Jedoch hat dieses Modell ein wenig Probleme bei der Unterscheidung von der Klasse "Sitzen" und "Stehen". Gleichzeitig klassifiert es einige "Treppenlaufen" Segmente als "Laufen". Dies könnte daran liegen, dass während der Aufnahme vom Treppenlaufen zwischen den Treppen auch flache Ebenen gab, bei welcher die User zur nächsten Treppe liefen. 
+Das CNN-Modell kann fast alle Klassen gut klassifizieren. Jedoch hat dieses Modell ein wenig Probleme bei der Unterscheidung von der Klasse "Sitzen" und "Stehen". Gleichzeitig klassifiert es einige "Treppenlaufen" Segmente als "Laufen". Dies könnte daran liegen, dass während der Aufnahme vom Treppenlaufen zwischen den Treppen auch flache Ebenen gab, bei welcher die User zur nächsten Treppe liefen.
+
+![CNN Metrics CV](https://camo.githubusercontent.com/07f48e25532dea024c6c2981f1cfb44dde1b95cd24f927b5d73d3b085382d01e/68747470733a2f2f61737365742e636d6c2e6465762f313833383833626537306131373639666163363238373836336536646334386337383031353534303f636d6c3d706e672663616368652d6279706173733d35366265313166622d616537622d346435612d626263332d353232626532303433316562)
+
+Der F1 Macro Score liegt bei einer 10-fold Cross Validation bei etwa 0.9062 mit einer Standardabweichung von 0.0288. Die Accuracy liegt bei etwa 0.8972 mit einer Standardabweichung von 0.0326
 
 ### HGBC
-![HGBC](https://camo.githubusercontent.com/5d23ce9145ef32a020e2a129834f2d8530ca06d4f96f491ccd97215ae817e3bf/68747470733a2f2f61737365742e636d6c2e6465762f393066306538363239353166663366616330666630373136653330376339376261616262353339373f636d6c3d706e672663616368652d6279706173733d30663738363036642d396431352d343465352d393537332d393538376661623936313438)
+![HGBC Confusion Matrix](https://camo.githubusercontent.com/5d23ce9145ef32a020e2a129834f2d8530ca06d4f96f491ccd97215ae817e3bf/68747470733a2f2f61737365742e636d6c2e6465762f393066306538363239353166663366616330666630373136653330376339376261616262353339373f636d6c3d706e672663616368652d6279706173733d30663738363036642d396431352d343465352d393537332d393538376661623936313438)
 
 Das HGBC-Modell hat bei der Klassifizierung die gleichen Probleme wie das CNN, insbesondere bei der Unterscheidung von "Sitzen" & "Stehen" sowie "Treppenlaufen" & "Laufen". Dennoch kann dieses Modell diese Probleme deutlich besser bewältigen als das CNN.
+
+![HGBC Metrics CV](https://camo.githubusercontent.com/71ddbcafd2baa820395cb364da0ab2bb17d83dbcee6cedcabfeab0310ebf47b9/68747470733a2f2f61737365742e636d6c2e6465762f346138303764643765323061633336353636333132353133323464666263643963373562323438333f636d6c3d706e672663616368652d6279706173733d65666531616563372d376634372d346163392d616435392d393632383335383230323561)
+
+Der F1 Macro Score liegt bei einer 10-fold Cross Validation bei etwa 0.9820 mit einer Standardabweichung von 0.0039. Die Accuracy liegt bei etwa 0.9841 mit einer Standardabweichung von 0.0034
 
 ### Sicherheit bei der Klassifikation
 Das CNN-Modell ist bei den Klassifikationen weniger sicher und gibt eine niedrigere Wahrscheinlichkeit zurück. Im Gegensatz dazu ist sich das HGBC-Modell bei fast allen Klassifikationen sehr sicher. Man könnte meinen, dass es zu sicher ist und daher eher unrealistisch erscheint: Die Wahrscheinlichkeiten liegen oft sehr nahe oder genau bei 100%.
