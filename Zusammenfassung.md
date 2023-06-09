@@ -10,8 +10,7 @@ Im Rahmen der Aktivitätserkennung wurden verschiedene Modelle verwendet, darunt
 
 Zur Bewertung der Modellleistung wurde der Macro F1-Score verwendet, jedoch haben wir diesen noch mit der Accuracy ergänzt. 
 - Wir haben Accuracy als Metrik genommen, um einen Gesamtüberblick über die Anzahl richtiger Klassifikationen zu erhalten. 
-- Wir haben den Macro F1-Score genommen, um festzustellen, ob ein Modell eine bestimmte Klasse bevorzugt. Wenn der F1-Score der Accuracy nahe liegt, deutet das darauf hin, dass unser Modell keine Klasse stark bevorzugt.
-- Zusätzlich generieren wir aus Debugging-Gründen auch eine Decision Matrix.
+- Wir haben den Macro F1-Score genommen, um festzustellen, ob ein Modell alle Klassen gleich gut klassifizieren kann. Falls der F1-Score der Accuracy nicht nahe liegen soll, deutet das darauf hin, dass das Modell nicht alle Klassen gleich gut klassifizieren kann. Das können wir danach mit einer automatisch generierten Confusion Matrix prüfen.
 
 Uns standen verschiedene Optionen für Train-Val-Test-Splits zur Verfügung, darunter ein segmentbasierter Split oder ein personenbasierter Split.
 - Bei einem segmentbasierten Split erhält das Modell Daten von jedem Nutzer. Somit lohnt sich ein segmentbasierter Split, wenn man die Performance auf bereits vorhandene Nutzerdaten testen will. 
