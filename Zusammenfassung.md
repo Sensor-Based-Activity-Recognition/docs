@@ -28,7 +28,7 @@ Das CNN-Modell wurde auf Grundlage des Papers von [Chen (2021)](https://github.c
 
 Die Daten wurden aus der Datenbank extrahiert und auf 50Hz resampelt. Anschliessend wurden sie in 5-Sekunden-Fenster aufgeteilt und der Train-Test-Split durchgeführt. Während der STFT-Phase wurden die Spectrogramme erstellt. Die Phase dvclive trainierte das Modell und die evaluate-Phase erstellte eine Konfusionsmatrix, um die Art der Fehler zu analysieren, die das CNN macht.
 
-Die Architektur des Modells besteht aus vier Convolutional Layers, gefolgt von Pooling Layers. Nach dem Convolution-Teil folgt eine Global Average Pooling Layer und zwei Fully Connected Layers. Das Modell erzielte eine Test-Accuracy von über 90%.
+Die Architektur des Modells besteht aus vier Convolutional Layers, jeweils gefolgt von Pooling Layers. Nach dem Convolution-Teil folgt eine Global Average Pooling Layer und zwei Fully Connected Layers. Das Modell erzielte eine Test-Accuracy von über 90%.
 
 ## HGBC-Modell
 
