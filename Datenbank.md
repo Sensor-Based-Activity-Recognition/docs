@@ -23,4 +23,4 @@ docker run -p 9000:9000  \
 3. CSV-Datei auswählen, mit "click here to browse"
 4. Tabelle umbenennen: `RENAME TABLE "<csv-file-name>" TO "prod";`
 
-Ein exportiertes CSV kann hier gefunden werden: [prod-latest.csv](prod-latest.csv).
+Ein exportiertes CSV mit den aktuellen Daten kann auf [Onedrive](https://fhnw365-my.sharepoint.com/:x:/g/personal/florin_barbisch_students_fhnw_ch/EauK8rc196RPvU98kkrdfjkB71DiCQLZEFuaQBVMXgmMEw?e=roEdFe) gefunden werden.
