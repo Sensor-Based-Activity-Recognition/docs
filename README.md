@@ -41,6 +41,10 @@ Siehe [Modelle](Modelle.md).
 Hier befindet sich die Architektur unseres Systems.
 Siehe [Architektur](Architektur.md).
 
+### Datenbank
+Hier befindet sich eine Anleitung zum Aufsetzen/Wiederherstellen der QuestDB.
+Siehe [Datenbank](Datenbank.md).
+
 ### Notizen
 Hier sind alle Notizen, die wir während der Arbeit gemacht haben.
 Siehe [2023_02_23_DataMeeting.md](notizen/2023_02_23_DataMeeting.md).
