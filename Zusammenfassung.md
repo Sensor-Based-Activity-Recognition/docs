@@ -69,3 +69,11 @@ Eine wichtige Erkenntnis aus diesem Projekt ist, dass man sich nicht ausschliess
 Zudem haben wir DVC für unsere Challenge genutzt und von Anfang an unsere Pipeline auf Basis von MLOps entwickelt. Dies ermöglichte uns, unsere Pipeline sehr modular aufzubauen und unsere Modelle bei jeder Änderung automatisiert mit einem Runner zu testen. Obwohl dieser Prozess für unseren Anwendungsfall wahrscheinlich etwas Overkill war, konnten wir erste Erfahrungen für mögliche Anwendungen in zukünftigen Projekten und in der Arbeitswelt sammeln.
 
 Bei der Entwicklung haben wir darauf geachtet, dass bei der Arbeit mehrerer Nutzer an einem Repository mit Branches gearbeitet wird und alle Änderungen, die im Main landen sollten, auch durch Peer-Review überprüft werden. Auf diese Weise konnten wir sicherstellen, dass unser Code von mehreren Personen akzeptiert wurde und unseren Qualitätsstandards entspricht.
+
+# Vision
+
+In einer hypothetischen Zukunft könnte dieses Projekt noch weiter ausgebaut werden. Durch unseren modularen Aufbau mittels DVC könnten wir bereits vorhandene Skripte nutzen, um neue Stages und daraus resultierend neue Pipelines zu implementieren. Dies würde es ermöglichen, unsere bestehenden Modelle mit neuen Daten zu trainieren oder sogar neue Modelle zu entwickeln.
+
+Weiterhin könnten wir auch neue Daten zu neuen Aktivitäten hinzufügen, auf die unsere Modelle in Zukunft trainiert werden könnten. Durch die Integration dieser zusätzlichen Daten in unsere Datengrundlage könnten wir die Leistungsfähigkeit unserer Modelle erweitern und sie für eine breitere Palette von Anwendungsfällen einsetzen.
+
+Darüber hinaus könnten wir die Datengrundlage kontinuierlich erweitern, indem wir neue Messungen von verschiedenen Personen mit unterschiedlichen Endgeräten erfassen und in die Datenbank importieren. Durch eine grössere Datengrundlage könnten wir personenbasierte Train-Val-Test-Splits erstellen und unsere Modelle auf diese optimieren, damit wir präzisere Vorhersagen für neue Nutzer machen können.
