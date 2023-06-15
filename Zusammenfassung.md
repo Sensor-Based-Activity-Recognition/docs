@@ -69,3 +69,11 @@ Eine wichtige Erkenntnis aus diesem Projekt ist, dass man sich nicht ausschliess
 Zudem haben wir DVC für unsere Challenge genutzt und von Anfang an unsere Pipeline auf Basis von MLOps entwickelt. Dies ermöglichte uns, unsere Pipeline sehr modular aufzubauen und unsere Modelle bei jeder Änderung automatisiert mit einem Runner zu testen. Obwohl dieser Prozess für unseren Anwendungsfall wahrscheinlich etwas Overkill war, konnten wir erste Erfahrungen für mögliche Anwendungen in zukünftigen Projekten und in der Arbeitswelt sammeln.
 
 Bei der Entwicklung haben wir darauf geachtet, dass bei der Arbeit mehrerer Nutzer an einem Repository mit Branches gearbeitet wird und alle Änderungen, die im Main landen sollten, auch durch Peer-Review überprüft werden. Auf diese Weise konnten wir sicherstellen, dass unser Code von mehreren Personen akzeptiert wurde und unseren Qualitätsstandards entspricht.
+
+# Vision
+
+Wenn uns mehr Zeit hätten, würden wir diese Challenge folgendermassen erweitern:
+
+- **Erweiterung der Datensammlung:** Wir würden zusätzliche Daten von neuen Personen, Endgeräten, Aktivitäten und Handypositionen sammeln. Zudem würden wir auch Smartwatch-Daten in die Datengrundlage integrieren. Durch diese erweiterte Datengrundlage könnten wir eine breitere Palette von Anwendungsfällen abdecken und die Präzision unserer Modelle durch die Einbindung von Smartwatch-Daten und neuen Trainingsdaten verbessern. Zudem würden wir einen personenbasierten Train-Val-Test Split erstellen, um unsere Modelle gezielt zu optimieren und präzisere Vorhersagen für neue Nutzer zu ermöglichen. Auf diese Weise könnten wir unsere Applikation veröffentlichen und sicherstellen, dass sie auch für andere Nutzer verlässliche Ergebnisse liefert.
+
+- **Implementierung einer Fehlerkorrekturfunktion:** Darüber hinaus würden wir unserer Applikation eine Funktion hinzufügen, die es den Nutzern ermöglicht, falsche Vorhersagen zu melden. Basierend auf diesem Feedback würden wir das Modell automatisch weiter trainieren. Anschliessend würden wir diese aktualisierten Versionen regelmässig in unsere Schnittstelle hochladen, um sicherzustellen, dass die Nutzer kontinuierlich von den verbesserten Vorhersagen profitieren.
