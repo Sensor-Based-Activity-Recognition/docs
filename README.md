@@ -1,7 +1,9 @@
 # Docs
-Unser Dokumentationsrepository.
+Dies ist unser Dokumentationsrepository. 
 
 ## Repositories
+Alle Repositories sind hier verlinkt. Die entsprechenden Erklärungen zu den Implementationen in den Repositories sind im jeweiligen Repo README.md zu finden.
+
 ### blam
 Blam ist unser Data Preprocessing Tool, welches uns hilft, die Daten von den Dateien zu extrahieren, zurechtzuschneiden, auf 100Hz zu downsamplen und in die Datenbank zu schreiben.
 Siehe [Blam](https://github.com/Sensor-Based-Activity-Recognition/blam).
@@ -24,7 +26,10 @@ In diesem Repository befindet sich unsere Mobile App, in der unser Modell genutz
 In diesem Repository befindet sich eine API, die von unserer Mobile App genutzt wird, um Activity Recognition durchzuführen. Die API basiert auf Django und beinhaltet zwei REST Schnittstellen.
 [Api](https://github.com/Sensor-Based-Activity-Recognition/api)
 
-## Weitere Informationen
+## Dokumentation
+
+Hier sind die detaillierten Dokumentationen zu unserem Challenge-Ziel, Domänenwissen, Resultaten und unsere Erkenntnisse zu finden.
+
 ### Konzept
 Hier ist unser Konzept für die Arbeit.
 Siehe [Konzept.md](Konzept.md).
@@ -44,10 +49,6 @@ Siehe [Architektur](Architektur.md).
 ### Datenbank
 Hier befindet sich eine Anleitung zum Aufsetzen/Wiederherstellen der QuestDB.
 Siehe [Datenbank](Datenbank.md).
-
-### Notizen
-Hier sind alle Notizen, die wir während der Arbeit gemacht haben.
-Siehe [2023_02_23_DataMeeting.md](notizen/2023_02_23_DataMeeting.md).
 
 ### Taskboard
 Das Taskboard mit allen Iterationen und Tasks ist hier zu finden:
