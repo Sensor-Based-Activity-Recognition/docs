@@ -51,6 +51,10 @@ Siehe [Architektur](Architektur.md).
 Das Taskboard mit allen Iterationen und Tasks ist hier zu finden:
 Siehe [Taskboard](https://github.com/orgs/Sensor-Based-Activity-Recognition/projects/1/views/1)
 
+### Progress Reports
+Unsere Progress Reports wurden aus dem Taskboard generiert und sind hier zu finden:
+Siehe [Progress Reports](https://github.com/orgs/Sensor-Based-Activity-Recognition/projects/1/insights)
+
 ### Setup
 Wenn du unsere Arbeit reproduzieren oder darauf aufbauen möchtest, dann findest du hier die entsprechende Anleitung [Setup.md](Setup.md)
 
