@@ -1,7 +1,8 @@
 # Docs
-Dies ist unser Dokumentationsrepository. 
+Dies ist unser Dokumentations-Repository zur Challenge.
 
 ## Repositories
+
 Alle Repositories sind hier verlinkt. Die entsprechenden Erklärungen zu den Implementationen in den Repositories sind im jeweiligen Repo README.md zu finden.
 
 ### blam
@@ -46,13 +47,12 @@ Siehe [Modelle](Modelle.md).
 Hier befindet sich die Architektur unseres Systems.
 Siehe [Architektur](Architektur.md).
 
-### Datenbank
-Hier befindet sich eine Anleitung zum Aufsetzen/Wiederherstellen der QuestDB.
-Siehe [Datenbank](Datenbank.md).
-
-### Taskboard
+### Projektmanagement und Taskboard
 Das Taskboard mit allen Iterationen und Tasks ist hier zu finden:
 Siehe [Taskboard](https://github.com/orgs/Sensor-Based-Activity-Recognition/projects/1/views/1)
+
+### Setup
+Wenn du unsere Arbeit reproduzieren oder darauf aufbauen möchtest, dann findest du hier die entsprechende Anleitung [Setup.md](Setup.md)
 
 ### Ergebnisse und Erkenntnisse
 Hier ist eine Zusammenfassung der Ergebnisse und Erkenntnisse, die wir während der Arbeit gemacht haben.
