@@ -1,9 +1,8 @@
-# AdaBoost Stump (Baseline Model)
+# AdaBoost Stump (Baseline model)
 
 This model uses the **AdaBoostClassifier** from sklearn `sklearn.ensemble.AdaBoostClassifier`, with the base estimator set to **DecisionTreeClassifier** from sklearn `sklearn.tree.DecisionTreeClassifier` with a maximum depth of 1. The AdaBoost Stump is a variant of the AdaBoost algorithm that uses decision stumps (decision trees with one split) as base estimators. It is particularly effective for high-dimensional datasets where each feature contributes a small amount of information to the final decision.
 
 A survey study in our initial research [Thakur Biswas 2020](./recherche/Thakur_Biswas_2020.md) pointed towards `AdaBoostStump` to be a classifier well fit for activity recognition, it outperformed most other model types in accuracy. Specifically the paper "An Automatic User-Adapted Physical Activity Classification Method Using Smartphones" (Li 2017) used `AdaBoostStump` for activity recognition and achieved an accuracy of 98% on the WISDM dataset.
-Based on this paper we have choosen this Model to be our baseline and reference for further models in this document.
 
 ## DAG/Stages
 ```mermaid
@@ -32,16 +31,71 @@ The AdaBoost Stump classifier works by combining several weak learners (in this 
 
 ## Results
 
-The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
+The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of ~57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
 
-|     Test metric    |        score +/- std         |
-|:------------------:|:----------------------------:|
-|  10-fold CV test accuracy     |     0.566 +/- 0.0545     |
-|  10-fold CV test macro-f1-score    |     0.505 +/- 0.0662      |
+|  Test metric   |     score +/- std |
+| :------------- | :---------------- |
+| test_acc_epoch | 0.566 +/- 0.0545 |
+| test_f1_epoch  | 0.505 +/- 0.0662 |
+
+As we had an already great performing HistGradientBoostingClassifier model, we decided to not further investigate the AdaBoost Stump model.
 
 CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/111#issuecomment-1594368841)
 
-# CNN
+# HistGradientBoostingClassifier (ML model)
+This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
+
+## Features
+As an input for out processing pipeline, we are using following features (All features share the same timestamp):
+
+- Accelerometer X axis (uncalibrated)
+- Accelerometer Y axis (uncalibrated)
+- Accelerometer Z axis (uncalibrated)
+- Gyroscope X axis (uncalibrated)
+- Gyroscope Y axis (uncalibrated)
+- Gyroscope Z axis (uncalibrated)
+- Magnetometer X axis (uncalibrated)
+- Magnetometer Y axis (uncalibrated)
+- Magnetometer Z axis (uncalibrated)
+
+Afterwards the observations (consisting from a timestamp and all features above) are resampled with a linear interpolation to 50Hz.
+
+Next, each recording is split into 5s segments.
+
+Finally, for each semgent, each feature is projected into the frequency spectrum space.
+
+Stepping forward in the pipeline, a train test split is performed (train: random 80% of all segments, test: random 20% of all segments)
+
+Before training the model, the features are stacked column wise, transforming each segment to a single row. All rows are stacked to matrix which will be fed into the model.
+
+## DAG/Stages
+```mermaid
+flowchart TD
+    node1["dvclive"]
+    node2["fft"]
+    node3["pull_data_calibrated"]
+    node4["resample_50Hz"]
+    node5["segmentate_5s"]
+    node6["train_test_split_ratio02"]
+    node2-->node1
+    node3-->node4
+    node4-->node5
+    node5-->node2
+    node5-->node6
+    node6-->node1
+```
+
+## Results
+The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
+
+|          Test metric           |  score +/- std   |
+| :----------------------------- | :--------------- |
+|    10-fold CV test accuracy    | 0.984 +/- 0.0034 |
+| 10-fold CV test macro-f1-score | 0.982 +/- 0.0039 |
+
+CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/106#issuecomment-1584297162)
+
+# CNN (DL model)
 The CNN is based on the paper by [Chen 2021](./recherche/Chen_2021.md). As described in the paper, we created spectrograms from the sensor data using the Short-Time Fourier Transform. We implemented the CNN using PyTorch and customized it a bit.
 
 ## DAG/Stages
@@ -91,27 +145,27 @@ The model architecture consists of four convolutional layers each followed by po
 ### Model Parameters
 Here's a summary of the trainable parameters in the model:
 
-|  Name  |      Type          | Params |
-|--------|:-----------------:|-------:|
-| conv1             |  Conv2d             |  7.2 K |
-| conv2             |  Conv2d             | 32.8 K |
-| conv3             |  Conv2d             | 73.9 K |
-| fc1               |  Linear             |  8.3 K |
-| fc2               |  Sequential         |   390  |
+| Name  |    Type    | Params |
+| :---- | :--------- | :----- |
+| conv1 |   Conv2d   |  7.2 K |
+| conv2 |   Conv2d   | 32.8 K |
+| conv3 |   Conv2d   | 73.9 K |
+| fc1   |   Linear   |  8.3 K |
+| fc2   | Sequential |    390 |
 
 Total params: 122 K
 
 ## Results
 The model achieves a Performance of over 90% on the test set on the Accuracy. Here are the results:
 
-|     Test metric    |        score +/- std         |
-|:------------------:|:----------------------------:|
-|  10-fold CV test accuracy     |     0.906 +/- 0.0288     |
-|  10-fold CV test macro-f1-score    |     0.897 +/- 0.0326      |
+|          Test metric           |  score +/- std   |
+| :----------------------------- | :--------------- |
+|    10-fold CV test accuracy    | 0.906 +/- 0.0288 |
+| 10-fold CV test macro-f1-score | 0.897 +/- 0.0326 |
 
 CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/109#issuecomment-1584413452)
 
-# MLP
+# MLP (Deprecated model)
 The MLP is a simple, self-made model, we used as a placeholder. For this model we use the same spectrograms we used with the CNN model.
 
 ## DAG/Stages
@@ -128,74 +182,21 @@ The model architecture consists of three fully connected linear layers. Here's a
 ### Model Parameters
 Here's a summary of the trainable parameters in the model:
 
-| Name     | Type               | Params
-|----------|:------------------:|---------------:|
-| fc1      | Linear             | 11.7 M         |
-| fc2      | Linear             | 50.1 K         |
-| fc3      | Linear             | 606            |
+| Name |  Type  | Params |
+| :---- | :---- | :----- |
+| fc1  | Linear | 11.7 M |
+| fc2  | Linear | 50.1 K |
+| fc3  | Linear |    606 |
 
 Total params: 11.8 M
 
 ## Results
 The model achieves a very Bad performance and isn't considered for future use, since we have a better Deep Learning Model.
 
-|     Test metric    |        score        |
-|:------------------:|----------------------------:|
-|  test_acc_epoch    |     0.229       |
-|  test_f1_epoch     |     0.062       |
-
-# HistGradientBoostingClassifier
-This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
-
-## Features
-As an input for out processing pipeline, we are using following features (All features share the same timestamp):
-
-- Accelerometer X axis (uncalibrated)
-- Accelerometer Y axis (uncalibrated)
-- Accelerometer Z axis (uncalibrated)
-- Gyroscope X axis (uncalibrated)
-- Gyroscope Y axis (uncalibrated)
-- Gyroscope Z axis (uncalibrated)
-- Magnetometer X axis (uncalibrated)
-- Magnetometer Y axis (uncalibrated)
-- Magnetometer Z axis (uncalibrated)
-
-Afterwards the observations (consisting from a timestamp and all features above) are resampled with a linear interpolation to 50Hz.
-
-Next, each recording is split into 5s segments.
-
-Finally, for each semgent, each feature is projected into the frequency spectrum space.
-
-Stepping forward in the pipeline, a train test split is performed (train: random 80% of all segments, test: random 20% of all segments)
-
-Before training the model, the features are stacked column wise, transforming each segment to a single row. All rows are stacked to matrix which will be fed into the model.
-
-## DAG/Stages
-```mermaid
-flowchart TD
-    node1["dvclive"]
-    node2["fft"]
-    node3["pull_data_calibrated"]
-    node4["resample_50Hz"]
-    node5["segmentate_5s"]
-    node6["train_test_split_ratio02"]
-    node2-->node1
-    node3-->node4
-    node4-->node5
-    node5-->node2
-    node5-->node6
-    node6-->node1
-```
-
-## Results
-The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
-
-|     Test metric    |        score +/- std        |
-|:------------------:|:----------------------------:|
-|  10-fold CV test accuracy    |     0.984 +/- 0.0034     |
-|  10-fold CV test macro-f1-score    |     0.982 +/- 0.0039      |
-
-CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/106#issuecomment-1584297162)
+|  Test metric   | score |
+| :------------- | :---- |
+| test_acc_epoch | 0.229 |
+| test_f1_epoch  | 0.062 |
 
 # References
 

@@ -6,7 +6,7 @@ Die Motivation für dieses Projekt ergibt sich aus der steigenden Popularität v
 
 # Methodik und Metriken
 
-Im Rahmen der Aktivitätserkennung wurden verschiedene Modelle verwendet, darunter das Convolutional Neural Network (CNN) und der Histogram Gradient Boosting Classifier (HGBC).
+Im Rahmen der Aktivitätserkennung wurden verschiedene Modelle verwendet, darunter das Convolutional Neural Network (CNN), unser Deep Learning Modell, und der Histogram Gradient Boosting Classifier (HGBC), unser Machine Learning Modell.
 
 Zur Bewertung der Modellleistung wurde der Macro F1-Score verwendet, jedoch haben wir diesen noch mit der Accuracy ergänzt. 
 - Wir haben Accuracy als Metrik genommen, um einen Gesamtüberblick über die Anzahl richtiger Klassifikationen zu erhalten. 
@@ -20,7 +20,7 @@ In diesem Projekt haben wir uns für einen segmentbasierten Split entschieden, d
 
 # Modelle
 
-Ein ausführliche Übersicht aller Modelle ist unter [Modelle](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/Modelle.md) zu finden.
+Ein ausführliche Übersicht aller Modelle **inkl. Baseline model** ist unter [Modelle](https://github.com/Sensor-Based-Activity-Recognition/docs/blob/main/Modelle.md) zu finden.
 
 ## CNN-Modell
 
