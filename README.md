@@ -1,5 +1,5 @@
 # Docs
-Dies ist unser Dokumentations-Repository zur Challenge.
+Dies ist unser Dokumentations-Repository zur Challenge. Es bietet eine Übersicht mit Referenz zu den erarbeiteten Inhalten.
 
 ## Repositories
 
