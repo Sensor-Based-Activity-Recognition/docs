@@ -31,16 +31,16 @@ The AdaBoost Stump classifier works by combining several weak learners (in this 
 
 ## Results
 
-The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
+The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of ~57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
 
 |  Test metric   |     score +/- std |
 | :------------- | :---------------- |
-| test_acc_epoch | 0.5661 +/- 0.0545 |
-| test_f1_epoch  | 0.5048 +/- 0.0662 |
+| test_acc_epoch | 0.566 +/- 0.0545 |
+| test_f1_epoch  | 0.505 +/- 0.0662 |
 
 As we had an already great performing HistGradientBoostingClassifier model, we decided to not further investigate the AdaBoost Stump model.
 
-CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/111#issuecomment-1593199749)
+CML Report: [Link](https://github.com/Sensor-Based-Activity-Recognition/pipelines/pull/111#issuecomment-1594368841)
 
 # HistGradientBoostingClassifier (ML model)
 This model uses the **HistGradientBoostingClassifier** from sklearn `sklearn.ensemble.HistGradientBoostingClassifier`.
