@@ -34,7 +34,7 @@ The AdaBoost Stump classifier works by combining several weak learners (in this 
 The AdaBoost Stump model did not perform as well as expected based on the referenced research. It achieved an accuracy of 57% on the test set. It particularly struggled in differentiating similar activites such as walking and running or sitting and standing.
 
 |  Test metric   |     score +/- std |
-| :------------: | ----------------: |
+| :------------- | :---------------- |
 | test_acc_epoch | 0.5661 +/- 0.0545 |
 | test_f1_epoch  | 0.5048 +/- 0.0662 |
 
@@ -89,7 +89,7 @@ flowchart TD
 The model achieves a Performance of over 98% on the test set on the Accuracy. Here are the results:
 
 |          Test metric           |  score +/- std   |
-| :----------------------------: | :--------------: |
+| :----------------------------- | :--------------- |
 |    10-fold CV test accuracy    | 0.984 +/- 0.0034 |
 | 10-fold CV test macro-f1-score | 0.982 +/- 0.0039 |
 
@@ -146,7 +146,7 @@ The model architecture consists of four convolutional layers each followed by po
 Here's a summary of the trainable parameters in the model:
 
 | Name  |    Type    | Params |
-| ----- | :--------: | -----: |
+| :---- | :--------- | :----- |
 | conv1 |   Conv2d   |  7.2 K |
 | conv2 |   Conv2d   | 32.8 K |
 | conv3 |   Conv2d   | 73.9 K |
@@ -159,7 +159,7 @@ Total params: 122 K
 The model achieves a Performance of over 90% on the test set on the Accuracy. Here are the results:
 
 |          Test metric           |  score +/- std   |
-| :----------------------------: | :--------------: |
+| :----------------------------- | :--------------- |
 |    10-fold CV test accuracy    | 0.906 +/- 0.0288 |
 | 10-fold CV test macro-f1-score | 0.897 +/- 0.0326 |
 
@@ -183,7 +183,7 @@ The model architecture consists of three fully connected linear layers. Here's a
 Here's a summary of the trainable parameters in the model:
 
 | Name |  Type  | Params |
-| ---- | :----: | -----: |
+| :---- | :---- | :----- |
 | fc1  | Linear | 11.7 M |
 | fc2  | Linear | 50.1 K |
 | fc3  | Linear |    606 |
@@ -194,7 +194,7 @@ Total params: 11.8 M
 The model achieves a very Bad performance and isn't considered for future use, since we have a better Deep Learning Model.
 
 |  Test metric   | score |
-| :------------: | ----: |
+| :------------- | :---- |
 | test_acc_epoch | 0.229 |
 | test_f1_epoch  | 0.062 |
 
